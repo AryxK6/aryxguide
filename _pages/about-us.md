@@ -181,7 +181,7 @@ permalink: /about-us
         <p class="ab-author-bio">I've been building online for a while writing, testing content strategies, and figuring out how to make AI tools actually useful rather than just impressive-sounding. ARYX documents what I've learned. If something here helped you, that's the whole point.</p>
       </div>
     </div>
-    <a href="https://www.aryxguide.site/p/contact-us.html" class="ab-contact-row">
+    <a href="/contact-us" class="ab-contact-row">
       <span class="ab-contact-icon">✉</span>
       <span class="ab-contact-text">Have a question? <span>Get in touch →</span></span>
     </a>
