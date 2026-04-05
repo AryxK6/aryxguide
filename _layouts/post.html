@@ -1,0 +1,124 @@
+---
+layout: default
+---
+
+<style>
+.post-wrap { display:grid; grid-template-columns:1fr 280px; gap:24px; align-items:start; }
+@media(max-width:960px){ .post-wrap { grid-template-columns:1fr; } }
+</style>
+
+<div class="post-wrap">
+  <div>
+    <div class="art-breadcrumb">
+      <a href="/">Home</a>
+      <span>›</span>
+      {% if page.categories[0] %}<a href="/category/{{ page.categories[0] | slugify }}/">{{ page.categories[0] }}</a><span>›</span>{% endif %}
+      <span>{{ page.title | truncate: 40 }}</span>
+    </div>
+
+    <h1 class="art-title">{{ page.title }}</h1>
+
+    <div class="art-meta">
+      <div class="art-author">
+        <div class="art-av">A</div>
+        <div>
+          <div class="art-name">Aryx K.</div>
+          <div class="art-sub">{{ page.date | date: "%B %d, %Y" }} · <span id="read-time">...</span></div>
+        </div>
+      </div>
+      <div class="share-row">
+        <div class="sbtn" onclick="sShare('twitter')" role="button">X</div>
+        <div class="sbtn" onclick="sShare('facebook')" role="button">f</div>
+        <div class="sbtn" id="cpybtn" onclick="copyLink()" role="button">🔗</div>
+      </div>
+    </div>
+
+    {% if page.image %}
+    <img class="art-img" src="{{ page.image }}" alt="{{ page.title }}" loading="lazy"/>
+    {% endif %}
+
+    <div class="art-body" id="art-body">
+      <div class="art-toc" id="auto-toc" style="display:none;">
+        <div class="wtitle">Table of Contents</div>
+        <ul class="toc-list" id="toc-ul"></ul>
+      </div>
+      {{ content }}
+    </div>
+
+    {% if page.tags.size > 0 %}
+    <div class="art-tags">
+      {% for tag in page.tags %}
+      <a class="ctag" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="rcol">
+    <div class="rcol-inner">
+      <div class="wbox">
+        <div class="wtitle">Popular Posts</div>
+        <div class="pop-list" id="pop-list-art"></div>
+      </div>
+      <div class="wbox">
+        <div class="wtitle">Categories</div>
+        <div class="cat-list" id="cat-list-art"></div>
+      </div>
+      <div class="wbox">
+        <div class="wtitle">Archive</div>
+        <div class="arc-list" id="arc-list-art"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_POSTS = [
+  {% for post in site.posts %}
+  {
+    "title": {{ post.title | jsonify }},
+    "url": {{ post.url | jsonify }},
+    "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+    "category": {{ post.categories | first | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+
+function loadPostSidebar(){
+  var popHtml = '';
+  ALL_POSTS.slice(0,5).forEach(function(p,i){
+    popHtml += '<a class="pop-item" href="'+p.url+'"><div class="pop-num">0'+(i+1)+'</div><div class="pop-text">'+p.title+'</div></a>';
+  });
+  var popEl = document.getElementById('pop-list-art');
+  if(popEl) popEl.innerHTML = popHtml;
+
+  var cats = {};
+  ALL_POSTS.forEach(function(p){ if(p.category){ cats[p.category]=(cats[p.category]||0)+1; } });
+  var SHOW_LABELS = ['Skin Care','Hair Care','Body Care','Makeup & Beauty','Health & Wellness',"Women's Health",'Product Reviews','Natural & DIY'];
+  var catHtml = '';
+  SHOW_LABELS.forEach(function(name){
+    if(cats[name]){
+      catHtml += '<a class="cat-item" href="/category/'+name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'"><span class="cat-item-left">'+name+'</span><span class="cat-count">'+cats[name]+'</span></a>';
+    }
+  });
+  var catEl = document.getElementById('cat-list-art');
+  if(catEl && catHtml) catEl.innerHTML = catHtml;
+
+  var months = {};
+  var monthNames = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  ALL_POSTS.forEach(function(p){
+    if(p.date){ var ym=p.date.substring(0,7); months[ym]=(months[ym]||0)+1; }
+  });
+  var arcHtml = '';
+  Object.keys(months).sort().reverse().slice(0,6).forEach(function(ym){
+    var parts=ym.split('-');
+    arcHtml += '<a class="arc-item" href="/'+parts[0]+'/'+parts[1]+'/"><span>'+monthNames[parseInt(parts[1])]+' '+parts[0]+'</span><span class="arc-count">'+months[ym]+'</span></a>';
+  });
+  var arcEl = document.getElementById('arc-list-art');
+  if(arcEl && arcHtml) arcEl.innerHTML = arcHtml;
+}
+
+document.addEventListener('DOMContentLoaded', loadPostSidebar);
+</script>
