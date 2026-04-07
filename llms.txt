@@ -1,0 +1,35 @@
+# ARYX Guide
+
+> AI tools, SEO strategies, blogging guides, and ways to make money online. Written by Aryx K.
+
+## Site
+
+- URL: https://www.aryxguide.site
+- Author: Aryx K.
+- Topics: AI tools, SEO, blogging, affiliate marketing, make money online, productivity, automation
+
+## Main Categories
+
+- AI Guides: /category/ai-guides
+- AI Tools: /category/ai-tools
+- AI Tutorials: /category/ai-tutorials
+- SEO: /category/seo
+- Technical SEO: /category/technical-seo
+- Blogging: /category/blogging
+- Content Writing: /category/content-writing
+- Affiliate Marketing: /category/affiliate-marketing
+- Make Money Online: /category/make-money-online
+- Passive Income: /category/passive-income
+- Freelancing: /category/freelancing
+- Productivity: /category/productivity
+- Automation: /category/automation
+- Email Marketing: /category/email-marketing
+- Social Media: /category/social-media
+- YouTube: /category/youtube
+
+## Key Pages
+
+- About: /about-us
+- Contact: /contact-us
+- Privacy Policy: /privacy-policy
+- Affiliate Disclosure: /affiliate-disclosure
