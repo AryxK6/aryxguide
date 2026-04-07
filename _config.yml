@@ -1,0 +1,51 @@
+title: ARYX Guide
+description: Your go-to resource for AI tools, SEO tips, blogging guides, and making money online. Written by Aryx K.
+url: "https://www.aryxguide.site"
+baseurl: ""
+permalink: /:title/
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+include:
+  - _pages
+
+# ❌ Remove only problematic/system pages
+exclude:
+  - 404.html
+
+# 🔥 Control sitemap behavior
+defaults:
+  # ❌ Disable for category/tag/archive type pages
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      sitemap: true
+
+  - scope:
+      path: "category"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "categories"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "tag"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "tags"
+    values:
+      sitemap: false
+
+  # ✅ Ensure posts are included
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      sitemap: true
