@@ -1,15 +1,18 @@
 ---
 layout: null
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
 
+  <!-- All posts -->
   {% for post in site.posts %}
   <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
@@ -19,11 +22,14 @@ layout: null
   </url>
   {% endfor %}
 
+  <!-- All pages (except excluded) -->
   {% for page in site.pages %}
   {% unless page.sitemap == false %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ page.last_modified_at | default: page.date | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   {% endunless %}
   {% endfor %}
