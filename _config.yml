@@ -6,11 +6,9 @@ permalink: /:title
 
 plugins:
   - jekyll-seo-tag
-
+  - jekyll-sitemap
 include:
   - _pages
 
 exclude:
   - 404.html
-exclude:
-  - sitemap.xml
