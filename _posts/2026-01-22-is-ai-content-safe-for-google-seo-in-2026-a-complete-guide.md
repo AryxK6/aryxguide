@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Is AI Content Safe for Google SEO in 2026? A Complete Guide for Bloggers and Businesses"
-date: 2026-01-22 06:55:00 +0500
+date: 2026-01-22
 categories: ["Artificial Intelligence", "Blogging", "Content Writing", "SEO"]
 tags: ["Artificial Intelligence", "Blogging", "Content Writing", "SEO"]
 image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLrpjR72yD-eNjpRHghHdzF14XseWWoBvWKi6eGXMg0yqq8vtq4b2u_1bfHEfpmCp1FFbygZBmiXISdWQXkrTHaYevjnbSMD6qsvnbct0Miq6UIbGqWi0_2SdnY0hm37joqbAUnsdHtDPatrjsJAWxw3XVDBy4jVs25o95pGj0zYetAjLIpPUq_l3C88U/w400-h224/is-ai-content-safe-for-google-seo-2026.jpg"
