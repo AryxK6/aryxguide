@@ -1,7 +1,7 @@
 title: ARYX Guide
 description: Your go-to resource for AI tools, SEO tips, blogging guides, and making money online. Written by Aryx K.
 url: "https://www.aryxguide.site"
-baseurl: ""
+baseurl: "https://www.aryxguide.site"
 permalink: /:title
 plugins:
   - jekyll-sitemap
