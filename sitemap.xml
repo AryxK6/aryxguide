@@ -5,7 +5,7 @@ permalink: /sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
+  <!-- Home page -->
   <url>
     <loc>{{ site.url }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -23,16 +23,16 @@ permalink: /sitemap.xml
   </url>
   {% endfor %}
 
-  <!-- All pages (except excluded) -->
+  <!-- All HTML pages only -->
   {% for page in site.pages %}
-  {% unless page.sitemap == false %}
-  <url>
-    <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{{ page.last_modified_at | default: page.date | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {% endunless %}
+    {% if page.sitemap != false and page.ext == ".html" %}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>{{ page.last_modified_at | default: page.date | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+    {% endif %}
   {% endfor %}
 
 </urlset>
