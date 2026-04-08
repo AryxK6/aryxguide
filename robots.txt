@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /wp-admin/
 Allow: /
 
 Sitemap: https://www.aryxguide.site/sitemap.xml
