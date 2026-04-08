@@ -12,3 +12,5 @@ include:
 
 exclude:
   - 404.html
+exclude:
+  - sitemap.xml
