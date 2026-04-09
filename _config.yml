@@ -6,7 +6,7 @@ permalink: /:title
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-last-modified-at
+  - jekyll-feed
 
 include:
   - _pages
