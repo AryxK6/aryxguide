@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "How to Sell AI Prompt Packs in 2026"
+description: "Learn how to create, package, and sell AI prompt packs on Gumroad, Etsy, and PromptBase for real passive income in 2026."
 date: 2026-04-11
 categories: ["Make Money Online", "Digital Products"]
 tags: ["ai prompt packs", "sell ai prompts", "prompt engineering", "digital products", "make money online", "gumroad", "passive income"]
 image: "https://i.ibb.co/jZb3L15h/Laptop-screen-showing-202604111703.jpg"
-description: "Learn how to create, package, and sell AI prompt packs on Gumroad, Etsy, and PromptBase for real passive income in 2026."
 author: Aryx K.
 ---
 
