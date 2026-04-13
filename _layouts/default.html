@@ -907,17 +907,22 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 
 // ---- SCROLL REVEAL ----
+var _revealObs = null;
+function reObserveReveal(){
+  if(!_revealObs) return;
+  document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){ _revealObs.observe(el); });
+}
 function initReveal(){
   if(!('IntersectionObserver' in window)) {
     document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
     return;
   }
-  var obs = new IntersectionObserver(function(entries){
+  _revealObs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
     });
   },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  document.querySelectorAll('.reveal').forEach(function(el){ _revealObs.observe(el); });
 }
 
 // ---- READING PROGRESS ----
