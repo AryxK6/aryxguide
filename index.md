@@ -43,7 +43,7 @@ description: Practical guides on AI tools, SEO strategies, blogging, and making 
     <!-- FIRST 10 POSTS — pure Jekyll, no JS -->
     <div class="grid2" id="posts-grid">
       {% for post in site.posts offset:1 limit:10 %}
-      <a class="gcard reveal" href="{{ post.url }}">
+      <a class="gcard" href="{{ post.url }}">
         <div class="gc-img">
           {% if post.image %}<img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy"/>
           {% else %}<span style="font-size:32px;opacity:0.2;">⚡</span>{% endif %}
@@ -103,7 +103,7 @@ function buildCard(p) {
     ? '<img src="'+p.image+'" alt="'+p.title.replace(/"/g,'&quot;')+'" loading="lazy"/>'
     : '<span style="font-size:32px;opacity:0.2;">⚡</span>';
   var cat = p.category ? '<span class="ctag">'+p.category+'</span>' : '';
-  return '<a class="gcard reveal" href="'+p.url+'">'
+  return '<a class="gcard" href="'+p.url+'">'
     +'<div class="gc-img">'+img+'</div>'
     +'<div class="gc-body">'+cat
     +'<h3>'+p.title+'</h3>'
