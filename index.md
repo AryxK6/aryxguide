@@ -11,7 +11,7 @@ description: Practical guides on AI tools, SEO strategies, blogging, and making 
   <div>
 
     <!-- HERO -->
-    <div class="hero-post reveal">
+    <div class="hero-post">
       {% assign hero = site.posts | first %}
       {% if hero %}
       <a class="hero-card" href="{{ hero.url }}">
@@ -34,14 +34,14 @@ description: Practical guides on AI tools, SEO strategies, blogging, and making 
     </div>
 
     <!-- SECTION HEADER -->
-    <div class="sec-hdr reveal">
+    <div class="sec-hdr">
       <h2 class="sec-title">Latest Articles</h2>
       <div class="sec-line"></div>
       <span class="sec-tag">FRESH</span>
     </div>
 
     <!-- FIRST 10 POSTS — pure Jekyll, no JS -->
-    <div class="grid2 reveal" id="posts-grid">
+    <div class="grid2" id="posts-grid">
       {% for post in site.posts offset:1 limit:10 %}
       <a class="gcard reveal" href="{{ post.url }}">
         <div class="gc-img">
