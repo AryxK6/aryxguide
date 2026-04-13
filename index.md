@@ -11,7 +11,7 @@ description: Practical guides on AI tools, SEO strategies, blogging, and making 
   <div>
 
     <!-- HERO: Latest Post - static for SEO -->
-    <div class="hero-post" id="hero-post">
+    <div class="hero-post reveal" id="hero-post">
       {% assign hero = site.posts | first %}
       {% if hero %}
       <a class="hero-card" href="{{ hero.url }}">
@@ -34,14 +34,14 @@ description: Practical guides on AI tools, SEO strategies, blogging, and making 
     </div>
 
     <!-- LATEST ARTICLES header -->
-    <div class="sec-hdr">
+    <div class="sec-hdr reveal">
       <h2 class="sec-title">Latest Articles</h2>
       <div class="sec-line"></div>
       <span class="sec-tag">FRESH</span>
     </div>
 
     <!-- Grid: JS renders everything here (no static post loop below hero) -->
-    <div class="grid2" id="posts-grid"></div>
+    <div class="grid2 reveal" id="posts-grid"></div>
 
     <div id="pagination-wrap"></div>
 
@@ -100,7 +100,7 @@ function buildCard(p) {
     ? '<img src="' + p.image + '" alt="' + p.title.replace(/"/g, '&quot;') + '" loading="lazy"/>'
     : '<span style="font-size:32px;opacity:0.2;">⚡</span>';
   var cat = p.category ? '<span class="ctag">' + p.category + '</span>' : '';
-  return '<a class="gcard" href="' + p.url + '">'
+  return '<a class="gcard reveal" href="' + p.url + '">'
     + '<div class="gc-img">' + img + '</div>'
     + '<div class="gc-body">' + cat
     + '<h3>' + p.title + '</h3>'
