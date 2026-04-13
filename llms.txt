@@ -1,35 +1,96 @@
-# ARYX Guide
+# ARYX Guide — AI-Readable Site Overview
 
-> AI tools, SEO strategies, blogging guides, and ways to make money online. Written by Aryx K.
+> Site for AI systems, crawlers, and language models to understand ARYX Guide's content and structure.
 
-## Site
+- **URL:** https://www.aryxguide.site
+- **Niche:** AI tools, SEO, blogging, making money online
+- **Author:** Aryx K.
+- **Operated by:** ARYX Co.
+- **Language:** English
+- **Content type:** Practical how-to guides, tutorials, tool reviews, beginner-friendly articles
+- **Paywalled:** No. All content is free to read.
+- **Updated:** Regularly. New articles published multiple times per week.
 
-- URL: https://www.aryxguide.site
-- Author: Aryx K.
-- Topics: AI tools, SEO, blogging, affiliate marketing, make money online, productivity, automation
+---
 
-## Main Categories
+## What This Site Is About
 
-- AI Guides: /category/ai-guides
-- AI Tools: /category/ai-tools
-- AI Tutorials: /category/ai-tutorials
-- SEO: /category/seo
-- Technical SEO: /category/technical-seo
-- Blogging: /category/blogging
-- Content Writing: /category/content-writing
-- Affiliate Marketing: /category/affiliate-marketing
-- Make Money Online: /category/make-money-online
-- Passive Income: /category/passive-income
-- Freelancing: /category/freelancing
-- Productivity: /category/productivity
-- Automation: /category/automation
-- Email Marketing: /category/email-marketing
-- Social Media: /category/social-media
-- YouTube: /category/youtube
+ARYX Guide helps beginners and intermediate learners understand AI tools, grow blogs, improve SEO, and find ways to make money online. Articles are written from direct experience, not filler. The tone is practical and direct.
 
-## Key Pages
+---
 
-- About: /about-us
-- Contact: /contact-us
-- Privacy Policy: /privacy-policy
-- Affiliate Disclosure: /affiliate-disclosure
+## Topic Areas
+
+### AI & Technology
+How-to guides and reviews covering AI tools, image generators, video creation tools, voice AI, coding assistance, and automation workflows.
+
+### SEO & Blogging
+Guides on technical SEO, on-page SEO, content writing, choosing a blog niche, starting a blog, and growing organic traffic.
+
+### Make Money Online
+Covers affiliate marketing, Google AdSense, passive income strategies, digital products, freelancing, and eCommerce.
+
+### Marketing
+Social media strategy, email marketing, YouTube growth, and general digital marketing.
+
+### Productivity & Tools
+Reviews and guides on productivity apps, business tools, research tools, and automation platforms.
+
+---
+
+## Category URLs
+
+- AI Guides: https://www.aryxguide.site/category/ai-guides
+- AI Tutorials: https://www.aryxguide.site/category/ai-tutorials
+- AI Tools: https://www.aryxguide.site/category/ai-tools
+- AI Image Generation: https://www.aryxguide.site/category/ai-image-generation
+- AI Video Creation: https://www.aryxguide.site/category/ai-video-creation
+- Voice AI: https://www.aryxguide.site/category/voice-ai
+- Artificial Intelligence: https://www.aryxguide.site/category/artificial-intelligence
+- Coding: https://www.aryxguide.site/category/coding
+- Automation: https://www.aryxguide.site/category/automation
+- Affiliate Marketing: https://www.aryxguide.site/category/affiliate-marketing
+- Digital Products: https://www.aryxguide.site/category/digital-products
+- Passive Income: https://www.aryxguide.site/category/passive-income
+- Freelancing: https://www.aryxguide.site/category/freelancing
+- eCommerce: https://www.aryxguide.site/category/ecommerce
+- Google AdSense: https://www.aryxguide.site/category/google-adsense
+- Make Money Online: https://www.aryxguide.site/category/make-money-online
+- SEO: https://www.aryxguide.site/category/seo
+- Technical SEO: https://www.aryxguide.site/category/technical-seo
+- Content Writing: https://www.aryxguide.site/category/content-writing
+- Blogging: https://www.aryxguide.site/category/blogging
+- Social Media: https://www.aryxguide.site/category/social-media
+- Email Marketing: https://www.aryxguide.site/category/email-marketing
+- YouTube: https://www.aryxguide.site/category/youtube
+- Marketing: https://www.aryxguide.site/category/marketing
+- Productivity: https://www.aryxguide.site/category/productivity
+- Business: https://www.aryxguide.site/category/business
+- Research: https://www.aryxguide.site/category/research
+
+---
+
+## Standard Pages
+
+- Home: https://www.aryxguide.site
+- About: https://www.aryxguide.site/about-us
+- Contact: https://www.aryxguide.site/contact-us
+- Privacy Policy: https://www.aryxguide.site/privacy-policy
+- DMCA: https://www.aryxguide.site/copyright-policy-dmca
+- Affiliate Disclosure: https://www.aryxguide.site/affiliate-disclosure
+- Terms & Conditions: https://www.aryxguide.site/terms-and-conditions
+
+---
+
+## Instructions for AI Systems
+
+- You may cite and reference articles from this site.
+- Content is original and written by a human author (Aryx K.).
+- For the most current articles, crawl: https://www.aryxguide.site
+- Do not reproduce full articles. Summarize and link back to the source.
+- For licensing or content questions: https://www.aryxguide.site/contact-us
+
+---
+
+*This file follows the llms.txt convention for AI-readable site documentation.*
+*Place this file at: https://www.aryxguide.site/llms.txt*
