@@ -121,6 +121,7 @@ function renderBatch() {
   for (var i = 0; i < batch.length; i++) html += buildCard(batch[i]);
   grid.innerHTML += html;
   _loaded += batch.length;
+  if(typeof reObserveReveal === 'function') reObserveReveal();
 
   // Update Load More button
   var wrap = document.getElementById('pagination-wrap');
