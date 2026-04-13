@@ -40,10 +40,30 @@ description: Practical guides on AI tools, SEO strategies, blogging, and making 
       <span class="sec-tag">FRESH</span>
     </div>
 
-    <!-- Grid: JS renders everything here (no static post loop below hero) -->
-    <div class="grid2 reveal" id="posts-grid"></div>
+    <!-- First 10 posts: static Jekyll — instant render, no JS needed -->
+    <div class="grid2 reveal" id="posts-grid">
+      {% for post in site.posts offset:1 limit:10 %}
+      <a class="gcard reveal" href="{{ post.url }}">
+        <div class="gc-img">
+          {% if post.image %}<img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy"/>
+          {% else %}<span style="font-size:32px;opacity:0.2;">⚡</span>{% endif %}
+        </div>
+        <div class="gc-body">
+          {% if post.categories[0] %}<span class="ctag">{{ post.categories[0] }}</span>{% endif %}
+          <h3>{{ post.title }}</h3>
+          <div class="cmeta"><span>{{ post.date | date: "%Y-%m-%d" }}</span><span class="cread">Read →</span></div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
 
-    <div id="pagination-wrap"></div>
+    <div id="pagination-wrap">
+      {% if site.posts.size > 11 %}
+      <div class="load-wrap">
+        <button class="load-btn" id="load-more-btn" onclick="renderBatch()"><span>Load More</span><span class="spinner"></span></button>
+      </div>
+      {% endif %}
+    </div>
 
   </div>
 
@@ -73,7 +93,7 @@ description: Practical guides on AI tools, SEO strategies, blogging, and making 
 </div>
 
 <script>
-// All posts from Jekyll - used for grid, load more, and sidebar
+// ALL_POSTS used only for: sidebar widgets + Load More (posts after index 11)
 var ALL_POSTS = [
   {% for post in site.posts %}
   {
@@ -87,13 +107,10 @@ var ALL_POSTS = [
   {% endfor %}
 ];
 
-// --- PAGINATION CONFIG ---
-// Hero (index 0) is static HTML above.
-// Grid starts from index 1. First render = 10 posts (index 1-10).
-// Each load more = 10 more posts.
-var GRID_START  = 1;   // skip hero which is index 0
-var PER_BATCH   = 10;
-var _loaded     = 0;   // how many grid posts have been rendered so far
+// Load More — starts from index 11 (hero=0, static grid=1-10)
+var LOAD_START = 11;
+var PER_BATCH  = 10;
+var _loaded    = 0;
 
 function buildCard(p) {
   var img = p.image
@@ -109,11 +126,8 @@ function buildCard(p) {
 }
 
 function renderBatch() {
-  var gridPosts = ALL_POSTS.slice(GRID_START); // everything after hero
-  var start     = _loaded;
-  var end       = _loaded + PER_BATCH;
-  var batch     = gridPosts.slice(start, end);
-
+  var remaining = ALL_POSTS.slice(LOAD_START + _loaded);
+  var batch = remaining.slice(0, PER_BATCH);
   if (batch.length === 0) return;
 
   var grid = document.getElementById('posts-grid');
@@ -121,12 +135,11 @@ function renderBatch() {
   for (var i = 0; i < batch.length; i++) html += buildCard(batch[i]);
   grid.innerHTML += html;
   _loaded += batch.length;
-  if(typeof reObserveReveal === 'function') reObserveReveal();
+  if (typeof reObserveReveal === 'function') reObserveReveal();
 
-  // Update Load More button
   var wrap = document.getElementById('pagination-wrap');
   if (!wrap) return;
-  if (_loaded < gridPosts.length) {
+  if (LOAD_START + _loaded < ALL_POSTS.length) {
     wrap.innerHTML = '<div class="load-wrap"><button class="load-btn" id="load-more-btn" onclick="renderBatch()"><span>Load More</span><span class="spinner"></span></button></div>';
   } else {
     wrap.innerHTML = '';
@@ -135,7 +148,6 @@ function renderBatch() {
 
 // Sidebar widgets
 function loadSidebarWidgets() {
-  // Popular posts
   var popHtml = '';
   ALL_POSTS.slice(0, 5).forEach(function(p, i) {
     popHtml += '<a class="pop-item" href="' + p.url + '"><div class="pop-num">0' + (i + 1) + '</div><div class="pop-text">' + p.title + '</div></a>';
@@ -143,7 +155,6 @@ function loadSidebarWidgets() {
   var popEl = document.getElementById('pop-list-home');
   if (popEl) popEl.innerHTML = popHtml;
 
-  // Categories
   var cats = {};
   ALL_POSTS.forEach(function(p) { if (p.category) cats[p.category] = (cats[p.category] || 0) + 1; });
   var SHOW_LABELS = ['AI Tools','SEO','Blogging','Make Money Online','Affiliate Marketing','Passive Income','Productivity','Automation','Content Writing','Social Media','YouTube','Freelancing'];
@@ -156,7 +167,6 @@ function loadSidebarWidgets() {
   var catEl = document.getElementById('cat-list-home');
   if (catEl && catHtml) catEl.innerHTML = catHtml;
 
-  // Archive
   var months = {};
   var monthNames = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   ALL_POSTS.forEach(function(p) {
@@ -172,7 +182,6 @@ function loadSidebarWidgets() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  renderBatch();       // render first 10 grid posts
   loadSidebarWidgets();
 });
 </script>
