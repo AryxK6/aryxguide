@@ -85,7 +85,7 @@ author: Aryx K.
 <p>Your blog acts as a portfolio that demonstrates expertise. If you write well about AI tools, content marketing, or SEO, companies will pay for consulting based on that credibility. This is one of the fastest paths to meaningful income because rates are high and you do not need a large audience. You need enough content to show you know what you are talking about.</p>
 
 <figure style="text-align:center;">
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80&fm=webp" alt="Analytics dashboard showing blog traffic growth and monthly revenue data" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="800" loading="lazy" decoding="async" />
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80&fm=webp" alt="Analytics dashboard showing blog traffic growth and monthly revenue data" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="auto" loading="lazy" decoding="async" />
 <figcaption style="text-align:center;font-size:13px;color:#666;">Tracking traffic and revenue metrics from day one is part of treating blogging as a business rather than a hobby.</figcaption>
 </figure>
 
