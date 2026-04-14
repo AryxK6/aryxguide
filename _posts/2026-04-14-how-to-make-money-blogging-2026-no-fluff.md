@@ -27,7 +27,7 @@ author: Aryx K.
 </script>
 
 <figure style="text-align:center;">
-<img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=1200&auto=format&fit=crop&q=80&fm=webp" alt="Person working on laptop creating blog content for online income" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="800" fetchpriority="high" />
+<img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=1200&auto=format&fit=crop&q=80&fm=webp" alt="Person working on laptop creating blog content for online income" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="auto" fetchpriority="high" />
 <figcaption style="text-align:center;font-size:13px;color:#666;">Blogging is still a real path to online income in 2026, but the approach and timeline matter more than most guides admit.</figcaption>
 </figure>
 
