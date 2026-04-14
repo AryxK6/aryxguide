@@ -48,7 +48,7 @@ author: Aryx K.
 <p>For a tech and AI blog specifically, Lovable's 2026 niche analysis found that AI tools content generates recurring affiliate revenue through SaaS programs paying 20 to 30% commissions, and that 58% of small businesses are now using generative AI. The audience is growing, the monetization paths are concrete, and the CPMs from display advertising are on the higher end for a tech audience.</p>
 
 <figure style="text-align:center;">
-<img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=1200&auto=format&fit=crop&q=80&fm=webp" alt="Blogging content strategy workspace with laptop open and notes on desk" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="800" loading="lazy" decoding="async" />
+<img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=1200&auto=format&fit=crop&q=80&fm=webp" alt="Blogging content strategy workspace with laptop open and notes on desk" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="auto" loading="lazy" decoding="async" />
 <figcaption style="text-align:center;font-size:13px;color:#666;">A focused content strategy and realistic timeline are the two things most new bloggers skip from the start.</figcaption>
 </figure>
 
