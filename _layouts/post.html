@@ -80,7 +80,10 @@ layout: default
       </div>
       {{ content }}
     </div>
-
+<div class="comments-container" style="margin-top: 2rem;">
+  {% include comments.html %}
+</div>
+    
     {% if page.tags.size > 0 %}
     <div class="art-tags">
       {% for tag in page.tags %}
