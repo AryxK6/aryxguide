@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<style>
+.cat-header { padding: 40px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.cat-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.cat-page-title { font-family: var(--font-head); font-size: clamp(28px,4vw,44px); font-weight: 700; letter-spacing: -0.5px; line-height: 1.15; color: var(--text); margin-bottom: 14px; }
+.cat-page-desc { font-size: 16px; color: var(--text-2); line-height: 1.7; max-width: 700px; }
+.subcat-filter { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 20px 0; border-bottom: 1px solid var(--divider); margin-bottom: 28px; }
+.filter-pill { padding: 6px 16px; border-radius: 20px; font-size: 12.5px; font-weight: 600; border: 1px solid var(--border); color: var(--text-2); transition: all 0.15s; cursor: pointer; text-decoration: none; display: inline-block; }
+.filter-pill:hover, .filter-pill.active { background: var(--st-dim); color: var(--st-primary); border-color: var(--st-border); }
+.posts-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; min-height: 200px; }
+.no-posts { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-3); font-size: 14px; }
+@media(max-width:900px){ .posts-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:560px){ .posts-grid { grid-template-columns: 1fr; } }
+</style>
+
+<div class="container">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="sep">›</span>
+    <a href="/study/">Study</a>
+    {% if page.parent_slug %}
+    <span class="sep">›</span>
+    <a href="/study/{{ page.parent_slug }}/">{{ page.parent_category }}</a>
+    {% endif %}
+    <span class="sep">›</span>
+    <span class="current">{{ page.title }}</span>
+  </nav>
+
+  <div class="cat-header">
+    <div class="cat-eyebrow">
+      <span class="niche-pill pill-st">📚 Study</span>
+      {% if page.parent_category %}
+      <span style="font-size:11px;color:var(--text-3);font-weight:600;">{{ page.parent_category }}</span>
+      {% endif %}
+    </div>
+    <h1 class="cat-page-title">{{ page.title }}</h1>
+    <p class="cat-page-desc">{{ page.description }}</p>
+  </div>
+
+  {% unless page.parent_slug %}
+  <div class="subcat-filter">
+    <a href="/study/study-tips/" class="filter-pill">Study Tips</a>
+    <a href="/study/career-guidance/" class="filter-pill">Career Guidance</a>
+    <a href="/study/online-courses/" class="filter-pill">Online Courses</a>
+    <a href="/study/certifications/" class="filter-pill">Certifications</a>
+    <a href="/study/freelancing-remote/" class="filter-pill">Freelancing</a>
+    <a href="/study/personal-growth/" class="filter-pill">Personal Growth</a>
+    <a href="/study/digital-skills/" class="filter-pill">Digital Skills</a>
+    <a href="/study/college-student-life/" class="filter-pill">College Life</a>
+    <a href="/study/language-communication/" class="filter-pill">Language</a>
+    <a href="/study/tools-resources/" class="filter-pill">Tools</a>
+  </div>
+  {% endunless %}
+
+  {% if page.parent_slug %}
+  <div style="margin-bottom:20px;">
+    <a href="/study/{{ page.parent_slug }}/" style="font-size:13px;color:var(--st-primary);display:inline-flex;align-items:center;gap:6px;">← Back to {{ page.parent_category }}</a>
+  </div>
+  {% endif %}
+
+  <div class="posts-grid" id="posts-grid">
+    <div class="no-posts">Loading articles...</div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var CAT_TITLE = {{ page.title | jsonify }};
+  var ALL_POSTS = [
+    {% for post in site.study %}
+    {
+      "title":    {{ post.title | jsonify }},
+      "url":      {{ post.url | jsonify }},
+      "date":     {{ post.date | date: "%b %d, %Y" | jsonify }},
+      "category": {{ post.category | default: post.categories | first | jsonify }},
+      "tags":     {{ post.tags | jsonify }},
+      "image":    {{ post.image | default: "" | jsonify }},
+      "excerpt":  {{ post.excerpt | strip_html | truncate: 110 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  var grid = document.getElementById('posts-grid');
+  var posts = ALL_POSTS.filter(function(p){
+    if(!p.category) return false;
+    if(p.category.toLowerCase() === CAT_TITLE.toLowerCase()) return true;
+    if(p.tags && p.tags.some(function(t){ return t.toLowerCase() === CAT_TITLE.toLowerCase(); })) return true;
+    return false;
+  });
+
+  {% unless page.parent_slug %}
+  if(posts.length === 0) posts = ALL_POSTS;
+  {% endunless %}
+
+  if(posts.length === 0){
+    grid.innerHTML = '<div class="no-posts">Articles coming soon. This section is being built out.</div>';
+    return;
+  }
+
+  var html = '';
+  posts.forEach(function(p){
+    html += '<a href="' + p.url + '" class="acard st" style="text-decoration:none;">';
+    html += '<div class="acard-img">';
+    if(p.image) html += '<img src="' + p.image + '" alt="' + p.title.replace(/"/g,'') + '" loading="lazy"/>';
+    html += '</div><div class="acard-body">';
+    if(p.category) html += '<div class="niche-pill pill-st" style="font-size:9px;margin-bottom:6px;">' + p.category + '</div>';
+    html += '<div class="acard-title">' + p.title + '</div>';
+    if(p.excerpt) html += '<div class="acard-excerpt">' + p.excerpt + '</div>';
+    html += '<div class="acard-foot"><span class="acard-date">' + p.date + '</span><span class="acard-read" style="color:var(--st-primary);">Read →</span></div>';
+    html += '</div></a>';
+  });
+  grid.innerHTML = html;
+})();
+</script>
