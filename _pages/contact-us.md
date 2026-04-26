@@ -1,195 +1,203 @@
 ---
 layout: default
-title: "Contact Us"
-permalink: /contact-us
+title: "Contact ARYXGuide"
+description: "Get in touch with ARYXGuide. Questions about AI tools, health and beauty, or study content — or anything else. The inbox is open."
+permalink: /contact-us/
+sitemap: true
 ---
 
 <style>
-.aryx-contact-page {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 0 40px 0;
-  font-family: inherit;
+.contact-wrap { max-width: 720px; margin: 0 auto; padding: 32px 0 60px; }
+.contact-intro {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px; margin-bottom: 20px;
 }
-.aryx-contact-page .ac-intro {
-  margin-bottom: 32px;
+.contact-intro-title {
+  font-family: var(--font-head); font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 700; color: var(--text); margin-bottom: 16px; letter-spacing: -0.3px;
 }
-.aryx-contact-page .ac-intro p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin: 0 0 12px 0;
-  opacity: 0.85;
+.contact-intro p {
+  font-size: 15.5px; line-height: 1.85; color: var(--text-2); margin-bottom: 14px;
 }
-.aryx-contact-page .ac-email {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(79, 142, 247, 0.08);
-  border: 1px solid rgba(79, 142, 247, 0.2);
-  border-radius: 8px;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #4f8ef7;
-  margin-top: 4px;
-  text-decoration: none;
+.contact-intro p:last-child { margin-bottom: 0; }
+
+.contact-reasons {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px; margin-top: 20px;
 }
-.aryx-form-wrap {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 28px 28px 24px;
+.reason-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 14px;
+  font-size: 13px; color: var(--text-2); line-height: 1.5;
 }
-.aryx-form-wrap .af-title {
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 22px;
-  letter-spacing: 0.3px;
+.reason-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 6px;
 }
-.aryx-form-wrap .af-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
+.reason-dot.ai { background: var(--ai-primary); }
+.reason-dot.hb { background: var(--hb-primary); }
+.reason-dot.st { background: var(--st-primary); }
+
+.form-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px;
 }
-.aryx-form-wrap .af-group label {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  opacity: 0.6;
-  margin-bottom: 7px;
+.form-card-title {
+  font-family: var(--font-head); font-size: 18px; font-weight: 700;
+  color: var(--text); margin-bottom: 24px;
 }
-.aryx-form-wrap .af-group input,
-.aryx-form-wrap .af-group textarea {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  padding: 11px 14px;
-  font-size: 14px;
-  color: inherit;
-  font-family: inherit;
+.form-group {
+  display: flex; flex-direction: column; margin-bottom: 18px;
+}
+.form-group label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text-3); margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 14px; color: var(--text);
+  font-family: var(--font-body);
   outline: none;
-  transition: border 0.2s;
+  transition: border-color 0.2s;
+  appearance: none;
 }
-.aryx-form-wrap .af-group input:focus,
-.aryx-form-wrap .af-group textarea:focus {
-  border-color: #4f8ef7;
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--ai-primary);
+  background: var(--bg-card);
 }
-.aryx-form-wrap .af-group textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-.aryx-form-wrap .af-btn {
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-3); }
+.form-group textarea { min-height: 150px; resize: vertical; line-height: 1.6; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-submit {
   width: 100%;
-  background: linear-gradient(135deg, #4f8ef7, #8b5cf6);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 13px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  background: var(--ai-primary);
+  color: #fff; border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.15s;
+  font-family: var(--font-body);
   margin-top: 4px;
 }
-.aryx-form-wrap .af-btn:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+.form-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+.form-submit:active { transform: translateY(0); }
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.form-success {
+  display: none; margin-top: 16px;
+  background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25);
+  border-radius: var(--radius-sm); padding: 14px;
+  text-align: center; color: #22c55e; font-size: 14px; font-weight: 600;
 }
-.aryx-form-wrap .af-btn:active {
-  transform: translateY(0);
+.form-error {
+  display: none; margin-top: 16px;
+  background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25);
+  border-radius: var(--radius-sm); padding: 14px;
+  text-align: center; color: #ef4444; font-size: 14px; font-weight: 600;
 }
-.aryx-form-wrap .af-success {
-  display: none;
-  background: rgba(79, 247, 141, 0.08);
-  border: 1px solid rgba(79, 247, 141, 0.2);
-  border-radius: 8px;
-  padding: 14px;
-  text-align: center;
-  color: #4ff78d;
-  font-size: 13px;
-  font-weight: 600;
-  margin-top: 14px;
+.response-note {
+  font-size: 12px; color: var(--text-3);
+  text-align: center; margin-top: 14px; line-height: 1.6;
 }
-.aryx-form-wrap .af-error {
-  display: none;
-  background: rgba(247, 79, 79, 0.08);
-  border: 1px solid rgba(247, 79, 79, 0.2);
-  border-radius: 8px;
-  padding: 14px;
-  text-align: center;
-  color: #f74f4f;
-  font-size: 13px;
-  font-weight: 600;
-  margin-top: 14px;
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+  .contact-reasons { grid-template-columns: 1fr; }
+  .contact-intro, .form-card { padding: 22px 18px; }
 }
 </style>
 
-<div class="aryx-contact-page">
+<div class="contact-wrap">
 
-  <div class="ac-intro">
-    <p>Got a question, found something useful here, or just want to say hi the inbox is open. Response time is usually within 24 hours, sometimes less.</p>
-    <p>For business inquiries, collaborations, or anything that needs a real back-and-forth, email works best.</p>
+  <div class="contact-intro">
+    <h1 class="contact-intro-title">Get in Touch</h1>
+    <p>The inbox is open. If you found something useful here, spotted something wrong, or have a question about any of the content on this site, a message gets a real reply, usually within 24 hours.</p>
+    <p>For business inquiries, collaboration ideas, or anything that needs a longer back-and-forth, email works better than a quick form submission. Mention what it is about in the subject line and it will get handled faster.</p>
+
+    <div class="contact-reasons">
+      <div class="reason-item"><div class="reason-dot ai"></div>Questions about AI tools, SEO, or blogging content</div>
+      <div class="reason-item"><div class="reason-dot hb"></div>Health and beauty article feedback or corrections</div>
+      <div class="reason-item"><div class="reason-dot st"></div>Study and career guide questions or suggestions</div>
+      <div class="reason-item"><div class="reason-dot ai"></div>Corrections to outdated or inaccurate information</div>
+      <div class="reason-item"><div class="reason-dot hb"></div>Collaboration or partnership inquiries</div>
+      <div class="reason-item"><div class="reason-dot st"></div>Content requests or topic suggestions</div>
+    </div>
   </div>
 
-  <div class="aryx-form-wrap">
-    <div class="af-title">Send a Message</div>
-    <form id="aryx-contact-form">
-      <div class="af-group">
-        <label>Your Name</label>
-        <input name="name" required="" type="text" />
+  <div class="form-card">
+    <div class="form-card-title">Send a Message</div>
+    <form id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cf-name">Your Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Aryx K." required />
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email Address</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+        </div>
       </div>
-      <div class="af-group">
-        <label>Email Address</label>
-        <input name="email" required="" type="email" />
+      <div class="form-group">
+        <label for="cf-topic">Topic</label>
+        <select id="cf-topic" name="topic">
+          <option value="">Select a topic</option>
+          <option value="AI Guide">AI Guide question</option>
+          <option value="Health & Beauty">Health & Beauty question</option>
+          <option value="Study & Career">Study & Career question</option>
+          <option value="Correction">Article correction</option>
+          <option value="Collaboration">Collaboration or partnership</option>
+          <option value="Other">Something else</option>
+        </select>
       </div>
-      <div class="af-group">
-        <label>Subject</label>
-        <input name="subject" placeholder="What is this about?" type="text" />
+      <div class="form-group">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" placeholder="What would you like to say?" required></textarea>
       </div>
-      <div class="af-group">
-        <label>Message</label>
-        <textarea name="message" required=""></textarea>
-      </div>
-      <button class="af-btn" type="submit">Send Message</button>
-      <div class="af-success" id="af-success">✓ Message sent! We'll get back to you soon.</div>
-      <div class="af-error" id="af-error">Something went wrong. Please try again.</div>
+      <button class="form-submit" type="submit" id="cf-btn">Send Message</button>
+      <div class="form-success" id="cf-success">Message sent. You will hear back within 24 hours.</div>
+      <div class="form-error" id="cf-error">Something went wrong. Please try again.</div>
+      <p class="response-note">Typical response time is within 24 hours. For urgent matters, mention it in your message.</p>
     </form>
   </div>
 
 </div>
 
 <script>
-document.getElementById('aryx-contact-form').addEventListener('submit', function(e) {
+document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
-  var btn = this.querySelector('.af-btn');
-  var success = document.getElementById('af-success');
-  var error = document.getElementById('af-error');
+  var btn   = document.getElementById('cf-btn');
+  var succ  = document.getElementById('cf-success');
+  var err   = document.getElementById('cf-error');
+  succ.style.display = 'none';
+  err.style.display  = 'none';
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  success.style.display = 'none';
-  error.style.display = 'none';
-  var data = new FormData(this);
   fetch('https://formspree.io/f/maqpbvgy', {
     method: 'POST',
-    body: data,
+    body: new FormData(this),
     headers: { 'Accept': 'application/json' }
   }).then(function(res) {
     if (res.ok) {
-      success.style.display = 'block';
-      document.getElementById('aryx-contact-form').reset();
+      succ.style.display = 'block';
+      document.getElementById('contact-form').reset();
     } else {
-      error.style.display = 'block';
+      err.style.display = 'block';
     }
     btn.textContent = 'Send Message';
     btn.disabled = false;
   }).catch(function() {
-    error.style.display = 'block';
+    err.style.display = 'block';
     btn.textContent = 'Send Message';
     btn.disabled = false;
   });
 });
 </script>
-
