@@ -1,7 +1,7 @@
 ---
 layout: health_layout
 title: "Perimenopause Symptoms and What Actually Helps"
-date: 2026-04-27
+date: 2026-04-26
 permalink: /perimenopause-symptoms-what-actually-helps/
 categories: [Women's Health, Hormonal Health]
 tags: [perimenopause, hot flashes, hormonal health, menopause transition, women over 40, hormone therapy, sleep issues]
@@ -17,8 +17,8 @@ description: "What perimenopause feels like, when it starts, and what the eviden
   "description": "What perimenopause feels like, when it starts, and what the evidence says about managing hot flashes, sleep changes, and mood shifts in your 40s.",
   "author": {"@type": "Person", "name": "Aryx K."},
   "publisher": {"@type": "Organization", "name": "ARYX Guide": {"@type": "ImageObject", "url": "https://www.aryxguide.site/favicon.ico"}},
-  "datePublished": "2026-04-27",
-  "dateModified": "2026-04-27",
+  "datePublished": "2026-04-26",
+  "dateModified": "2026-04-26",
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aryxguide.site/perimenopause-symptoms-what-actually-helps"},
   "image": "https://i.ibb.co/SwLsjnYs/Woman-smiling-natural-202604110632.jpg",
   "articleSection": "Women's Health",
