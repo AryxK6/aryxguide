@@ -1,0 +1,19 @@
+---
+layout: null
+---
+{% assign ai_posts = site.posts %}
+{% assign hb_posts = site.health_beauty %}
+{% assign st_posts = site.study %}
+{% assign total = ai_posts.size | plus: hb_posts.size | plus: st_posts.size %}
+[
+{% assign written = 0 %}
+{% for post in ai_posts %}{% assign written = written | plus: 1 %}
+  {"title":{{ post.title | jsonify }},"url":{{ post.url | jsonify }},"date":{{ post.date | date: "%b %d, %Y" | jsonify }},"category":{{ post.categories | first | jsonify }},"image":{{ post.image | default: "" | jsonify }},"excerpt":{{ post.excerpt | strip_html | truncate: 120 | jsonify }},"niche":"ai"}{% assign rem = total | minus: written %}{% if rem > 0 %},{% endif %}
+{% endfor %}
+{% for post in hb_posts %}{% assign written = written | plus: 1 %}
+  {"title":{{ post.title | jsonify }},"url":{{ post.url | jsonify }},"date":{{ post.date | date: "%b %d, %Y" | jsonify }},"category":{{ post.categories | first | default: post.category | jsonify }},"image":{{ post.image | default: "" | jsonify }},"excerpt":{{ post.excerpt | strip_html | truncate: 120 | jsonify }},"niche":"health"}{% assign rem = total | minus: written %}{% if rem > 0 %},{% endif %}
+{% endfor %}
+{% for post in st_posts %}{% assign written = written | plus: 1 %}
+  {"title":{{ post.title | jsonify }},"url":{{ post.url | jsonify }},"date":{{ post.date | date: "%b %d, %Y" | jsonify }},"category":{{ post.categories | first | default: post.category | jsonify }},"image":{{ post.image | default: "" | jsonify }},"excerpt":{{ post.excerpt | strip_html | truncate: 120 | jsonify }},"niche":"study"}{% assign rem = total | minus: written %}{% if rem > 0 %},{% endif %}
+{% endfor %}
+]
