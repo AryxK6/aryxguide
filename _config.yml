@@ -1,0 +1,103 @@
+# ============================================================
+# ARYXGuide — Master Config
+# Silo Structure: AI Tech Guide | Health & Beauty | Study
+# ============================================================
+
+title: ARYXGuide
+description: Practical guides on AI tools, health & beauty, and study tips. Real content, tested strategies, no filler.
+url: "https://www.aryxguide.site"
+baseurl: ""
+lang: en
+
+author:
+  name: "Aryx K."
+  url: "https://www.aryxguide.site/about-us"
+
+twitter:
+  username: Aryx_K6
+  card: summary_large_image
+
+facebook:
+  publisher: "https://www.facebook.com/AryxK6"
+
+logo: "/assets/og-default.png"
+
+# ── URL Structure ──
+# _posts (AI Tech Guide): /article-name/ (unchanged — no SEO damage)
+permalink: /:title/
+
+# ── Collections (Health & Study silos) ──
+collections:
+  health_beauty:
+    output: true
+    permalink: /:title/
+  study:
+    output: true
+    permalink: /:title/
+
+# ── Defaults ──
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "ai_layout"
+      niche: "ai"
+      author: "Aryx K."
+
+  - scope:
+      path: "_health_beauty"
+      type: "health_beauty"
+    values:
+      layout: "health_layout"
+      niche: "health"
+      author: "Aryx K."
+
+  - scope:
+      path: "_study"
+      type: "study"
+    values:
+      layout: "study_layout"
+      niche: "study"
+      author: "Aryx K."
+
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+  - scope:
+      path: "category"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "health-beauty"
+    values:
+      sitemap: false
+
+  - scope:
+      path: "study"
+    values:
+      sitemap: false
+
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - .git
+  - .github
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+feed:
+  path: feed.xml
