@@ -99,8 +99,8 @@ sitemap: true
       <div class="section-line"></div>
       <a href="/category/ai-guides/" class="section-view-all ai">View All →</a>
     </div>
-    <div class="cards-grid-3">
-      {% for post in latest_ai limit: 3 %}
+    <div class="cards-grid-4">
+      {% for post in latest_ai limit: 4 %}
       <a href="{{ post.url }}" class="acard ai" style="text-decoration:none;">
         <div class="acard-img">
           {% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}
@@ -230,8 +230,8 @@ sitemap: true
       <div class="section-line"></div>
       <a href="/category/ai-guides/" class="section-view-all ai">All Posts →</a>
     </div>
-    <div class="cards-grid-3">
-      {% for post in more_ai limit: 3 %}
+    <div class="cards-grid-4">
+      {% for post in more_ai limit: 4 %}
       <a href="{{ post.url }}" class="acard ai" style="text-decoration:none;">
         <div class="acard-img">
           {% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}
