@@ -1,0 +1,280 @@
+---
+layout: default
+---
+
+<style>
+.cat-header { padding: 40px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.cat-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.cat-page-title { font-family: var(--font-head); font-size: clamp(26px,4vw,42px); font-weight: 700; letter-spacing: -0.5px; line-height: 1.15; color: var(--text); margin-bottom: 14px; }
+.cat-page-desc { font-size: 15.5px; color: var(--text-2); line-height: 1.7; max-width: 700px; }
+
+/* Main category — shows sub-category cards */
+.subcat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 40px; }
+.subcat-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 20px;
+  text-decoration: none; display: flex; flex-direction: column; gap: 8px;
+  transition: border-color 0.2s, transform 0.22s, box-shadow 0.22s;
+}
+.subcat-card:hover { border-color: var(--ai-border); transform: translateY(-2px); box-shadow: 0 8px 28px var(--ai-glow); }
+.subcat-card-title { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--text); }
+.subcat-card:hover .subcat-card-title { color: var(--ai-primary); }
+.subcat-card-desc { font-size: 12.5px; color: var(--text-2); line-height: 1.55; flex: 1; }
+.subcat-card-arrow { font-size: 12px; font-weight: 700; color: var(--ai-primary); margin-top: 4px; }
+
+/* Sub-category filter pills */
+.subcat-filter { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 0 0 20px; border-bottom: 1px solid var(--divider); margin-bottom: 28px; }
+.filter-pill { padding: 6px 16px; border-radius: 20px; font-size: 12.5px; font-weight: 600; border: 1px solid var(--border); color: var(--text-2); transition: all 0.15s; text-decoration: none; display: inline-block; }
+.filter-pill:hover, .filter-pill.active { background: var(--ai-dim); color: var(--ai-primary); border-color: var(--ai-border); }
+
+/* Posts grid */
+.posts-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; min-height: 200px; }
+.no-posts { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-3); font-size: 14px; line-height: 1.7; }
+.no-posts code { background: var(--surface); padding: 2px 6px; border-radius: 4px; font-size: 12px; color: var(--ai-light); }
+
+/* Back link */
+.back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ai-primary); margin-bottom: 20px; transition: gap 0.15s; }
+.back-link:hover { gap: 10px; }
+
+@media(max-width:900px){ .posts-grid,.subcat-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:560px){ .posts-grid,.subcat-grid { grid-template-columns: 1fr; } }
+</style>
+
+<div class="container" style="padding-bottom:60px;">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="sep">›</span>
+    {% if page.parent_slug %}
+      <a href="/category/{{ page.parent_slug }}/">{{ page.parent_category }}</a>
+      <span class="sep">›</span>
+      <span class="current">{{ page.title }}</span>
+    {% else %}
+      <span class="current">{{ page.title }}</span>
+    {% endif %}
+  </nav>
+
+  <!-- Back link for sub-categories -->
+  {% if page.parent_slug %}
+  <a href="/category/{{ page.parent_slug }}/" class="back-link">← Back to {{ page.parent_category }}</a>
+  {% endif %}
+
+  <!-- Category Header -->
+  <div class="cat-header">
+    <div class="cat-eyebrow">
+      <span class="niche-pill pill-ai">⚡ AI Guide</span>
+      {% if page.parent_category %}
+      <span style="font-size:11px;color:var(--text-3);font-weight:600;letter-spacing:0.5px;">{{ page.parent_category }}</span>
+      {% endif %}
+    </div>
+    <h1 class="cat-page-title">{{ page.title }}</h1>
+    <p class="cat-page-desc">{{ page.description }}</p>
+  </div>
+
+  {% if page.is_main_category %}
+  <!-- ══ MAIN CATEGORY PAGE — show sub-category cards ══ -->
+
+  {% assign page_slug = page.permalink | remove: '/category/' | remove: '/' %}
+
+  {% if page_slug == "ai-tools" %}
+  <div class="subcat-grid">
+    <a href="/category/ai-tools/ai-guide/" class="subcat-card"><div class="subcat-card-title">AI Guide</div><div class="subcat-card-desc">Complete guides on using AI tools effectively for work, content, and productivity.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/ai-tools/ai-tutorial/" class="subcat-card"><div class="subcat-card-title">AI Tutorial</div><div class="subcat-card-desc">Step-by-step tutorials for learning and using specific AI tools without the fluff.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/ai-tools/ai-image-generation/" class="subcat-card"><div class="subcat-card-title">AI Image Generation</div><div class="subcat-card-desc">Midjourney, DALL-E, Flux, and more — tested and compared for real use cases.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/ai-tools/ai-video-creation/" class="subcat-card"><div class="subcat-card-title">AI Video Creation</div><div class="subcat-card-desc">Create professional videos using AI. No camera, no studio, no expensive gear.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/ai-tools/voice-ai/" class="subcat-card"><div class="subcat-card-title">Voice AI</div><div class="subcat-card-desc">AI voice generators, text-to-speech, and voice cloning guides for audio content.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/ai-tools/artificial-intelligence/" class="subcat-card"><div class="subcat-card-title">Artificial Intelligence</div><div class="subcat-card-desc">How AI actually works and what it means for creators and everyday users in 2026.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/ai-tools/coding/" class="subcat-card"><div class="subcat-card-title">Coding</div><div class="subcat-card-desc">AI-assisted coding for non-developers. Build tools and automate without writing code.</div><div class="subcat-card-arrow">Browse →</div></a>
+  </div>
+  {% elsif page_slug == "make-money-online" %}
+  <div class="subcat-grid">
+    <a href="/category/make-money-online/affiliate-marketing/" class="subcat-card"><div class="subcat-card-title">Affiliate Marketing</div><div class="subcat-card-desc">Start and grow affiliate marketing in 2026. Strategies and what actually converts.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/make-money-online/digital-products/" class="subcat-card"><div class="subcat-card-title">Digital Products</div><div class="subcat-card-desc">Create and sell digital products using AI. Templates, prompt packs, ebooks, and more.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/make-money-online/passive-income/" class="subcat-card"><div class="subcat-card-title">Passive Income</div><div class="subcat-card-desc">Real passive income strategies for 2026. What works versus what is overhyped.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/make-money-online/freelancing/" class="subcat-card"><div class="subcat-card-title">Freelancing</div><div class="subcat-card-desc">Start freelancing, find clients, and grow a sustainable income using AI tools.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/make-money-online/ecommerce/" class="subcat-card"><div class="subcat-card-title">eCommerce</div><div class="subcat-card-desc">Build and run an online store using AI. From product research to marketing.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/make-money-online/google-adsense/" class="subcat-card"><div class="subcat-card-title">Google AdSense</div><div class="subcat-card-desc">Get AdSense approved, optimize placements, and increase RPM on your blog.</div><div class="subcat-card-arrow">Browse →</div></a>
+  </div>
+  {% elsif page_slug == "blogging-seo" %}
+  <div class="subcat-grid">
+    <a href="/category/blogging-seo/seo/" class="subcat-card"><div class="subcat-card-title">SEO</div><div class="subcat-card-desc">Keyword research, on-page optimization, and what Google actually rewards in 2026.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/blogging-seo/technical-seo/" class="subcat-card"><div class="subcat-card-title">Technical SEO</div><div class="subcat-card-desc">Technical SEO for bloggers. Site speed, structured data, and Core Web Vitals simplified.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/blogging-seo/content-writing/" class="subcat-card"><div class="subcat-card-title">Content Writing</div><div class="subcat-card-desc">Write content that ranks, converts, and actually sounds like a human wrote it.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/blogging-seo/blogging/" class="subcat-card"><div class="subcat-card-title">Blogging</div><div class="subcat-card-desc">Start, grow, and monetize a blog in 2026. Niche selection and traffic building covered.</div><div class="subcat-card-arrow">Browse →</div></a>
+  </div>
+  {% elsif page_slug == "marketing-social" %}
+  <div class="subcat-grid">
+    <a href="/category/marketing-social/social-media/" class="subcat-card"><div class="subcat-card-title">Social Media</div><div class="subcat-card-desc">Grow an audience and drive consistent traffic across social platforms in 2026.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/marketing-social/email-marketing/" class="subcat-card"><div class="subcat-card-title">Email Marketing</div><div class="subcat-card-desc">Build and monetize an email list. Tools and sequences that work for small blogs.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/marketing-social/youtube/" class="subcat-card"><div class="subcat-card-title">YouTube</div><div class="subcat-card-desc">Start and grow a YouTube channel using AI. Scripting, editing, and SEO covered.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/marketing-social/marketing/" class="subcat-card"><div class="subcat-card-title">Marketing</div><div class="subcat-card-desc">Digital marketing guides for bloggers and online business owners in 2026.</div><div class="subcat-card-arrow">Browse →</div></a>
+  </div>
+  {% elsif page_slug == "productivity-business" %}
+  <div class="subcat-grid">
+    <a href="/category/productivity-business/productivity/" class="subcat-card"><div class="subcat-card-title">Productivity</div><div class="subcat-card-desc">AI-powered productivity systems for bloggers and freelancers. Cut wasted time.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/productivity-business/automation/" class="subcat-card"><div class="subcat-card-title">Automation</div><div class="subcat-card-desc">Automate your blog and business with AI tools. No coding required.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/productivity-business/business/" class="subcat-card"><div class="subcat-card-title">Business</div><div class="subcat-card-desc">Online business guides for solo creators. Validate ideas and scale revenue.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/productivity-business/research/" class="subcat-card"><div class="subcat-card-title">Research</div><div class="subcat-card-desc">Use AI to do research faster. Fact-checking, content research, and analysis.</div><div class="subcat-card-arrow">Browse →</div></a>
+  </div>
+  {% endif %}
+
+  <!-- Also show all AI posts below sub-cat cards -->
+  <div style="margin-top:8px;">
+    <div class="section-header" style="margin-top:0;">
+      <div class="section-header-left">
+        <div class="section-icon icon-ai" style="width:24px;height:24px;font-size:13px;">⚡</div>
+        <div class="section-title" style="font-size:16px;">All Articles</div>
+      </div>
+      <div class="section-line"></div>
+    </div>
+    <div class="posts-grid" id="posts-grid">
+      <div class="no-posts">Loading articles...</div>
+    </div>
+  </div>
+
+  {% else %}
+  <!-- ══ SUB-CATEGORY PAGE — show filtered posts ══ -->
+
+  <!-- Sibling sub-category pills -->
+  {% assign page_parent = page.parent_slug %}
+  <div class="subcat-filter">
+    {% if page_parent == "ai-tools" %}
+      <a href="/category/ai-tools/ai-guide/" class="filter-pill {% if page.url contains '/ai-guide/' %}active{% endif %}">AI Guide</a>
+      <a href="/category/ai-tools/ai-tutorial/" class="filter-pill {% if page.url contains '/ai-tutorial/' %}active{% endif %}">AI Tutorial</a>
+      <a href="/category/ai-tools/ai-image-generation/" class="filter-pill {% if page.url contains '/ai-image-generation/' %}active{% endif %}">AI Image</a>
+      <a href="/category/ai-tools/ai-video-creation/" class="filter-pill {% if page.url contains '/ai-video-creation/' %}active{% endif %}">AI Video</a>
+      <a href="/category/ai-tools/voice-ai/" class="filter-pill {% if page.url contains '/voice-ai/' %}active{% endif %}">Voice AI</a>
+      <a href="/category/ai-tools/artificial-intelligence/" class="filter-pill {% if page.url contains '/artificial-intelligence/' %}active{% endif %}">AI</a>
+      <a href="/category/ai-tools/coding/" class="filter-pill {% if page.url contains '/coding/' %}active{% endif %}">Coding</a>
+    {% elsif page_parent == "make-money-online" %}
+      <a href="/category/make-money-online/affiliate-marketing/" class="filter-pill {% if page.url contains '/affiliate-marketing/' %}active{% endif %}">Affiliate</a>
+      <a href="/category/make-money-online/digital-products/" class="filter-pill {% if page.url contains '/digital-products/' %}active{% endif %}">Digital Products</a>
+      <a href="/category/make-money-online/passive-income/" class="filter-pill {% if page.url contains '/passive-income/' %}active{% endif %}">Passive Income</a>
+      <a href="/category/make-money-online/freelancing/" class="filter-pill {% if page.url contains '/freelancing/' %}active{% endif %}">Freelancing</a>
+      <a href="/category/make-money-online/ecommerce/" class="filter-pill {% if page.url contains '/ecommerce/' %}active{% endif %}">eCommerce</a>
+      <a href="/category/make-money-online/google-adsense/" class="filter-pill {% if page.url contains '/google-adsense/' %}active{% endif %}">AdSense</a>
+    {% elsif page_parent == "blogging-seo" %}
+      <a href="/category/blogging-seo/seo/" class="filter-pill {% if page.url contains '/seo/' %}active{% endif %}">SEO</a>
+      <a href="/category/blogging-seo/technical-seo/" class="filter-pill {% if page.url contains '/technical-seo/' %}active{% endif %}">Technical SEO</a>
+      <a href="/category/blogging-seo/content-writing/" class="filter-pill {% if page.url contains '/content-writing/' %}active{% endif %}">Content Writing</a>
+      <a href="/category/blogging-seo/blogging/" class="filter-pill {% if page.url contains '/blogging/' %}active{% endif %}">Blogging</a>
+    {% elsif page_parent == "marketing-social" %}
+      <a href="/category/marketing-social/social-media/" class="filter-pill {% if page.url contains '/social-media/' %}active{% endif %}">Social Media</a>
+      <a href="/category/marketing-social/email-marketing/" class="filter-pill {% if page.url contains '/email-marketing/' %}active{% endif %}">Email Marketing</a>
+      <a href="/category/marketing-social/youtube/" class="filter-pill {% if page.url contains '/youtube/' %}active{% endif %}">YouTube</a>
+      <a href="/category/marketing-social/marketing/" class="filter-pill {% if page.url contains '/marketing/' %}active{% endif %}">Marketing</a>
+    {% elsif page_parent == "productivity-business" %}
+      <a href="/category/productivity-business/productivity/" class="filter-pill {% if page.url contains '/productivity/' %}active{% endif %}">Productivity</a>
+      <a href="/category/productivity-business/automation/" class="filter-pill {% if page.url contains '/automation/' %}active{% endif %}">Automation</a>
+      <a href="/category/productivity-business/business/" class="filter-pill {% if page.url contains '/business/' %}active{% endif %}">Business</a>
+      <a href="/category/productivity-business/research/" class="filter-pill {% if page.url contains '/research/' %}active{% endif %}">Research</a>
+    {% endif %}
+  </div>
+
+  <div class="posts-grid" id="posts-grid">
+    <div class="no-posts">Loading articles...</div>
+  </div>
+  {% endif %}
+
+</div>
+
+<script>
+(function(){
+  var PAGE_TITLE = {{ page.title | jsonify }};
+  var IS_MAIN   = {{ page.is_main_category | default: false | jsonify }};
+  var PARENT    = {{ page.parent_slug | default: "" | jsonify }};
+
+  var ALL_POSTS = [
+    {% for post in site.posts %}
+    {
+      "title":    {{ post.title | jsonify }},
+      "url":      {{ post.url | jsonify }},
+      "date":     {{ post.date | date: "%b %d, %Y" | jsonify }},
+      "cats":     {{ post.categories | jsonify }},
+      "tags":     {{ post.tags | jsonify }},
+      "image":    {{ post.image | default: "" | jsonify }},
+      "excerpt":  {{ post.excerpt | strip_html | truncate: 110 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  var grid = document.getElementById('posts-grid');
+  if(!grid) return;
+
+  // Map sub-category slugs to post category names used in front matter
+  var CAT_MAP = {
+    // AI Tools
+    "ai-guide":             ["AI Guides","AI Guide","ai guide"],
+    "ai-tutorial":          ["AI Tutorials","AI Tutorial","ai tutorial"],
+    "ai-image-generation":  ["AI Image Generation","ai image"],
+    "ai-video-creation":    ["AI Video Creation","ai video"],
+    "voice-ai":             ["Voice AI","voice ai"],
+    "artificial-intelligence":["Artificial Intelligence","AI","artificial intelligence"],
+    "coding":               ["Coding","coding"],
+    // Make Money
+    "affiliate-marketing":  ["Affiliate Marketing","affiliate marketing"],
+    "digital-products":     ["Digital Products","digital products"],
+    "passive-income":       ["Passive Income","passive income"],
+    "freelancing":          ["Freelancing","freelancing"],
+    "ecommerce":            ["eCommerce","Ecommerce","ecommerce"],
+    "google-adsense":       ["Google AdSense","Google Adsense","adsense"],
+    // Blogging & SEO
+    "seo":                  ["SEO","seo","Blogging & SEO"],
+    "technical-seo":        ["Technical SEO","technical seo"],
+    "content-writing":      ["Content Writing","content writing","Writing"],
+    "blogging":             ["Blogging","blogging","Blogging & SEO"],
+    // Marketing
+    "social-media":         ["Social Media","social media","Marketing & Social"],
+    "email-marketing":      ["Email Marketing","email marketing"],
+    "youtube":              ["YouTube","youtube","Video"],
+    "marketing":            ["Marketing","marketing"],
+    // Productivity
+    "productivity":         ["Productivity","productivity","Productivity & Business"],
+    "automation":           ["Automation","automation"],
+    "business":             ["Business","business"],
+    "research":             ["Research","research"],
+  };
+
+  // Get current sub-slug from page URL
+  var url_parts = window.location.pathname.replace(/\/$/,'').split('/');
+  var sub_slug = url_parts[url_parts.length - 1];
+
+  var match_cats = CAT_MAP[sub_slug] || [];
+  var match_lower = match_cats.map(function(c){ return c.toLowerCase(); });
+
+  var posts;
+  if(IS_MAIN){
+    // Main category: show all posts (most recent)
+    posts = ALL_POSTS;
+  } else {
+    // Sub-category: filter by matching categories or tags
+    posts = ALL_POSTS.filter(function(p){
+      var all = (p.cats || []).concat(p.tags || []);
+      return all.some(function(c){
+        return match_lower.indexOf(c.toLowerCase()) !== -1;
+      });
+    });
+  }
+
+  if(posts.length === 0){
+    grid.innerHTML = '<div class="no-posts">No articles yet in <strong>' + PAGE_TITLE + '</strong>.<br><br>Add articles with <code>categories: ["' + PAGE_TITLE + '"]</code> in front matter.</div>';
+    return;
+  }
+
+  var html = '';
+  posts.forEach(function(p){
+    var cat = (p.cats && p.cats[0]) ? p.cats[0] : '';
+    html += '<a href="' + p.url + '" class="acard ai" style="text-decoration:none;">';
+    html += '<div class="acard-img">';
+    if(p.image) html += '<img src="' + p.image + '" alt="' + p.title.replace(/"/g,'&quot;') + '" loading="lazy"/>';
+    html += '</div><div class="acard-body">';
+    if(cat) html += '<div class="niche-pill pill-ai" style="font-size:9px;margin-bottom:6px;">' + cat + '</div>';
+    html += '<div class="acard-title">' + p.title + '</div>';
+    if(p.excerpt) html += '<div class="acard-excerpt">' + p.excerpt + '</div>';
+    html += '<div class="acard-foot"><span class="acard-date">' + p.date + '</span><span class="acard-read">Read →</span></div>';
+    html += '</div></a>';
+  });
+  grid.innerHTML = html;
+})();
+</script>
