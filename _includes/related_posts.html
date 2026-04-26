@@ -1,0 +1,46 @@
+{% comment %}
+  related_posts.html — Silo Logic
+  Usage: {% include related_posts.html niche=page.niche current_url=page.url %}
+  Only shows posts from the SAME niche. Never cross-links AI articles in Health sidebar etc.
+{% endcomment %}
+
+{% assign niche = include.niche | default: page.niche %}
+{% assign current = include.current_url | default: page.url %}
+{% assign max_posts = include.max | default: 4 %}
+
+{% if niche == "ai" %}
+  {% assign pool = site.posts | where_exp: "p", "p.url != current" %}
+{% elsif niche == "health" %}
+  {% assign pool = site.health_beauty | where_exp: "p", "p.url != current" %}
+{% elsif niche == "study" %}
+  {% assign pool = site.study | where_exp: "p", "p.url != current" %}
+{% else %}
+  {% assign pool = "" %}
+{% endif %}
+
+{% if pool.size > 0 %}
+  {% for post in pool limit: max_posts %}
+  <a href="{{ post.url }}" class="hcard" style="text-decoration:none;">
+    {% if post.image %}
+    <div class="hcard-img">
+      <img
+        src="{{ post.image }}"
+        alt="{{ post.image_alt | default: post.title }}"
+        loading="lazy"
+        width="72" height="60"
+      />
+    </div>
+    {% else %}
+    <div class="hcard-img" style="display:flex;align-items:center;justify-content:center;font-size:22px;opacity:0.3;">
+      {% if niche == "ai" %}⚡{% elsif niche == "health" %}🌸{% else %}📚{% endif %}
+    </div>
+    {% endif %}
+    <div class="hcard-body">
+      <div class="hcard-title">{{ post.title | truncate: 65 }}</div>
+      <div class="hcard-meta">{{ post.date | date: "%b %d, %Y" }}</div>
+    </div>
+  </a>
+  {% endfor %}
+{% else %}
+  <p style="font-size:13px;color:var(--text-3);padding:8px 0;">More articles coming soon.</p>
+{% endif %}
