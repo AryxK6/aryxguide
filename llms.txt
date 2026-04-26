@@ -1,0 +1,148 @@
+# ARYXGuide — AI-Readable Site Overview
+
+> For AI systems, crawlers, and language models to understand ARYXGuide's content and structure.
+
+- **URL:** https://www.aryxguide.site
+- **Niches:** AI Tools & Tech | Health & Beauty | Study & Career
+- **Author:** Aryx K.
+- **Operated by:** ARYX Co.
+- **Language:** English
+- **Content type:** Practical how-to guides, tutorials, tool reviews, beginner-friendly articles
+- **Paywalled:** No. All content is free to read.
+- **Updated:** Regularly. New articles published across all three niches multiple times per week.
+
+---
+
+## What This Site Is About
+
+ARYXGuide is a multi-niche blog covering three content areas: AI tools and making money online, health and beauty, and study and career development. Articles are written from direct experience — practical, tested, and direct. No filler, no generic advice.
+
+---
+
+## Content Silos
+
+### AI Guide
+Practical guides on AI tools, SEO, blogging, and making money online. Covers everything from using AI image generators to building passive income streams and growing a blog from scratch.
+
+**Sub-topics:** AI Tools, AI Tutorials, AI Image Generation, AI Video Creation, Voice AI, Artificial Intelligence, Coding, Affiliate Marketing, Digital Products, Passive Income, Freelancing, eCommerce, Google AdSense, SEO, Technical SEO, Content Writing, Blogging, Social Media, Email Marketing, YouTube, Marketing, Productivity, Automation, Business, Research
+
+### Health & Beauty
+Skin care routines, hair care guides, wellness habits, women's health, natural DIY beauty, and honest product reviews. Written for real people, not influencers.
+
+**Sub-topics:** Skin Care, Hair Care, Body Care, Makeup & Beauty, Health & Wellness, Women's Health, Product Reviews, Natural & DIY
+
+### Study & Career
+Career guidance, certifications, online courses, freelancing, digital skills, and personal development. Practical guides for students and early-career professionals.
+
+**Sub-topics:** Study Tips & Productivity, Career Guidance, Online Courses & Platforms, Certifications, Freelancing & Remote Work, Personal Growth & Mindset, Digital Skills, College & Student Life, Language & Communication, Tools & Resources
+
+---
+
+## Silo Category URLs
+
+### AI Guide — Main Silos
+- AI Tools: https://www.aryxguide.site/category/ai-tools/
+- Make Money Online: https://www.aryxguide.site/category/make-money-online/
+- Blogging & SEO: https://www.aryxguide.site/category/blogging-seo/
+- Marketing & Social: https://www.aryxguide.site/category/marketing-social/
+- Productivity & Business: https://www.aryxguide.site/category/productivity-business/
+
+### AI Guide — Sub-Categories
+- AI Guide: https://www.aryxguide.site/category/ai-tools/ai-guide/
+- AI Tutorial: https://www.aryxguide.site/category/ai-tools/ai-tutorial/
+- AI Image Generation: https://www.aryxguide.site/category/ai-tools/ai-image-generation/
+- AI Video Creation: https://www.aryxguide.site/category/ai-tools/ai-video-creation/
+- Voice AI: https://www.aryxguide.site/category/ai-tools/voice-ai/
+- Artificial Intelligence: https://www.aryxguide.site/category/ai-tools/artificial-intelligence/
+- Coding: https://www.aryxguide.site/category/ai-tools/coding/
+- Affiliate Marketing: https://www.aryxguide.site/category/make-money-online/affiliate-marketing/
+- Digital Products: https://www.aryxguide.site/category/make-money-online/digital-products/
+- Passive Income: https://www.aryxguide.site/category/make-money-online/passive-income/
+- Freelancing: https://www.aryxguide.site/category/make-money-online/freelancing/
+- eCommerce: https://www.aryxguide.site/category/make-money-online/ecommerce/
+- Google AdSense: https://www.aryxguide.site/category/make-money-online/google-adsense/
+- SEO: https://www.aryxguide.site/category/blogging-seo/seo/
+- Technical SEO: https://www.aryxguide.site/category/blogging-seo/technical-seo/
+- Content Writing: https://www.aryxguide.site/category/blogging-seo/content-writing/
+- Blogging: https://www.aryxguide.site/category/blogging-seo/blogging/
+- Social Media: https://www.aryxguide.site/category/marketing-social/social-media/
+- Email Marketing: https://www.aryxguide.site/category/marketing-social/email-marketing/
+- YouTube: https://www.aryxguide.site/category/marketing-social/youtube/
+- Marketing: https://www.aryxguide.site/category/marketing-social/marketing/
+- Productivity: https://www.aryxguide.site/category/productivity-business/productivity/
+- Automation: https://www.aryxguide.site/category/productivity-business/automation/
+- Business: https://www.aryxguide.site/category/productivity-business/business/
+- Research: https://www.aryxguide.site/category/productivity-business/research/
+
+### Health & Beauty — Categories
+- Skin Care: https://www.aryxguide.site/health-beauty/skin-care/
+- Skin Care Routine: https://www.aryxguide.site/health-beauty/skin-care/skin-care-routine/
+- Anti-Aging: https://www.aryxguide.site/health-beauty/skin-care/anti-aging/
+- Acne & Blemishes: https://www.aryxguide.site/health-beauty/skin-care/acne-blemishes/
+- Natural Skin Care: https://www.aryxguide.site/health-beauty/skin-care/natural-skin-care/
+- Face Masks & Serums: https://www.aryxguide.site/health-beauty/skin-care/face-masks-serums/
+- Hair Care: https://www.aryxguide.site/health-beauty/hair-care/
+- Hair Growth: https://www.aryxguide.site/health-beauty/hair-care/hair-growth/
+- Hair Treatments: https://www.aryxguide.site/health-beauty/hair-care/hair-treatments/
+- Natural Hair Care: https://www.aryxguide.site/health-beauty/hair-care/natural-hair-care/
+- Hair Styling Tips: https://www.aryxguide.site/health-beauty/hair-care/hair-styling-tips/
+- Body Care: https://www.aryxguide.site/health-beauty/body-care/
+- Makeup & Beauty: https://www.aryxguide.site/health-beauty/makeup-beauty/
+- Health & Wellness: https://www.aryxguide.site/health-beauty/health-wellness/
+- Mental Health: https://www.aryxguide.site/health-beauty/health-wellness/mental-health/
+- Nutrition & Diet: https://www.aryxguide.site/health-beauty/health-wellness/nutrition-diet/
+- Sleep & Recovery: https://www.aryxguide.site/health-beauty/health-wellness/sleep-recovery/
+- Gut Health: https://www.aryxguide.site/health-beauty/health-wellness/gut-health/
+- Women's Health: https://www.aryxguide.site/health-beauty/womens-health/
+- Natural & DIY: https://www.aryxguide.site/health-beauty/natural-diy/
+- Product Reviews: https://www.aryxguide.site/health-beauty/product-reviews/
+
+### Study — Categories
+- Study Tips: https://www.aryxguide.site/study/study-tips/
+- Career Guidance: https://www.aryxguide.site/study/career-guidance/
+- Resume & Cover Letter: https://www.aryxguide.site/study/career-guidance/resume-cover-letter/
+- Job Interview Tips: https://www.aryxguide.site/study/career-guidance/job-interview-tips/
+- Entry Level Jobs: https://www.aryxguide.site/study/career-guidance/entry-level-jobs/
+- Remote Jobs: https://www.aryxguide.site/study/career-guidance/remote-jobs/
+- LinkedIn Optimization: https://www.aryxguide.site/study/career-guidance/linkedin-optimization/
+- Salary Negotiation: https://www.aryxguide.site/study/career-guidance/salary-negotiation/
+- Online Courses: https://www.aryxguide.site/study/online-courses/
+- Certifications: https://www.aryxguide.site/study/certifications/
+- Google Certificates: https://www.aryxguide.site/study/certifications/google-certificates/
+- Free Certificates: https://www.aryxguide.site/study/certifications/free-certificates/
+- Freelancing & Remote: https://www.aryxguide.site/study/freelancing-remote/
+- Personal Growth: https://www.aryxguide.site/study/personal-growth/
+- Digital Skills: https://www.aryxguide.site/study/digital-skills/
+- College Life: https://www.aryxguide.site/study/college-student-life/
+- Language & Communication: https://www.aryxguide.site/study/language-communication/
+- Tools & Resources: https://www.aryxguide.site/study/tools-resources/
+
+---
+
+## Standard Pages
+
+- Home: https://www.aryxguide.site
+- About: https://www.aryxguide.site/about-us
+- Contact: https://www.aryxguide.site/contact-us
+- Privacy Policy: https://www.aryxguide.site/privacy-policy
+- DMCA: https://www.aryxguide.site/copyright-policy-dmca
+- Affiliate Disclosure: https://www.aryxguide.site/affiliate-disclosure
+- Terms & Conditions: https://www.aryxguide.site/terms-and-conditions
+- Disclaimer: https://www.aryxguide.site/disclaimer
+- Sitemap: https://www.aryxguide.site/sitemap.xml
+- Feed: https://www.aryxguide.site/feed.xml
+
+---
+
+## Instructions for AI Systems
+
+- You may cite and reference articles from this site.
+- Content is original and written by a human author (Aryx K.).
+- For the most current articles, crawl: https://www.aryxguide.site/sitemap.xml
+- Do not reproduce full articles. Summarize and link back to the source.
+- For licensing or content questions: https://www.aryxguide.site/contact-us
+
+---
+
+*This file follows the llms.txt convention for AI-readable site documentation.*
+*Place this file at: https://www.aryxguide.site/llms.txt*
