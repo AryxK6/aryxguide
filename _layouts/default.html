@@ -594,6 +594,7 @@ body::before {
    ARTICLE CARDS
    ============================================================ */
 .cards-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.cards-grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .cards-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
 
 .acard {
@@ -791,6 +792,7 @@ body::before {
   .hero-grid { grid-template-columns: 1fr 1fr; }
   .footer-main { grid-template-columns: 1fr 1fr; }
   .cards-grid-3 { grid-template-columns: repeat(2,1fr); }
+  .cards-grid-4 { grid-template-columns: repeat(2,1fr); }
   /* Tighten nav on medium screens to prevent header wrap */
   .nav-logo { font-size: 19px; margin-right: 16px; }
   .nav-links > li > a,
@@ -809,7 +811,7 @@ body::before {
 }
 @media (max-width: 600px) {
   .container, .container-narrow { padding: 0 12px; }
-  .cards-grid-3, .cards-grid-2 { grid-template-columns: 1fr; }
+  .cards-grid-3, .cards-grid-4, .cards-grid-2 { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 24px; }
   .section-view-all { display: none; }
 }
