@@ -40,16 +40,17 @@ sitemap: true
 
       <!-- Side 1 — latest Health post -->
       {% if side1 %}
-      <a href="{{ side1.url }}" class="hero-side" style="text-decoration:none;">
-        <div>
+      <a href="{{ side1.url }}" class="hero-side hero-side-img" style="text-decoration:none;{% if side1.image %}background-image:url('{{ side1.image }}');{% endif %}">
+        <div class="hero-side-overlay"></div>
+        <div class="hero-side-body">
           <div class="niche-pill pill-hb">🌸 Health & Beauty</div>
-          <div class="article-title">{{ side1.title }}</div>
-          <div class="article-meta">
+          <div class="article-title" style="color:#fff;">{{ side1.title }}</div>
+          <div class="article-meta" style="color:rgba(255,255,255,0.5);">
             <span>Aryx K.</span><span class="sep">·</span>
             <span>{{ side1.date | date: "%b %d, %Y" }}</span>
           </div>
+          <div class="read-more" style="color:var(--hb-light);">Read →</div>
         </div>
-        <div class="read-more" style="color:var(--hb-primary);">Read →</div>
       </a>
       {% else %}
       <div class="hero-side" style="justify-content:center;align-items:center;text-align:center;">
@@ -62,16 +63,17 @@ sitemap: true
 
       <!-- Side 2 — latest Study post -->
       {% if side2 %}
-      <a href="{{ side2.url }}" class="hero-side" style="text-decoration:none;">
-        <div>
+      <a href="{{ side2.url }}" class="hero-side hero-side-img" style="text-decoration:none;{% if side2.image %}background-image:url('{{ side2.image }}');{% endif %}">
+        <div class="hero-side-overlay"></div>
+        <div class="hero-side-body">
           <div class="niche-pill pill-st">📚 Study</div>
-          <div class="article-title">{{ side2.title }}</div>
-          <div class="article-meta">
+          <div class="article-title" style="color:#fff;">{{ side2.title }}</div>
+          <div class="article-meta" style="color:rgba(255,255,255,0.5);">
             <span>Aryx K.</span><span class="sep">·</span>
             <span>{{ side2.date | date: "%b %d, %Y" }}</span>
           </div>
+          <div class="read-more" style="color:var(--st-light);">Read →</div>
         </div>
-        <div class="read-more" style="color:var(--st-primary);">Read →</div>
       </a>
       {% else %}
       <div class="hero-side" style="justify-content:center;align-items:center;text-align:center;">
