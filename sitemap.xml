@@ -4,26 +4,22 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% comment %} 1. Saare Simple Pages (About, Contact, etc.) {% endcomment %}
+  {% comment %} 1. Saare Pages (About, Contact, etc.) {% endcomment %}
   {% for page in site.pages %}
     {% if page.url != '/404.html' and page.sitemap != false %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
     </url>
     {% endif %}
   {% endfor %}
 
-  {% comment %} 2. Saare Articles (Jo bhi _posts ya collections mein hain) {% endcomment %}
-  {% for post in site.documents %}
-    {% if post.sitemap != false %}
+  {% comment %} 2. Saare Articles (Automatic) {% endcomment %}
+  {% for doc in site.documents %}
+    {% if doc.sitemap != false and doc.url contains 'category' == false %}
     <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      <lastmod>{{ post.date | default: site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>daily</changefreq>
-      <priority>1.0</priority>
+      <loc>{{ site.url }}{{ doc.url }}</loc>
+      <lastmod>{{ doc.date | default: site.time | date_to_xmlschema }}</lastmod>
     </url>
     {% endif %}
   {% endfor %}
