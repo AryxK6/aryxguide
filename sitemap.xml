@@ -4,17 +4,17 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% comment %} 1. Normal Pages {% endcomment %}
+  {% comment %} 1. SIRF PAGES (About, Contact etc.) - CSS/JS filter ke sath {% endcomment %}
   {% for page in site.pages %}
-    {% if page.url != '/404.html' and page.sitemap != false %}
+    {% unless page.url contains '.css' or page.url contains '.js' or page.url == '/404.html' or page.sitemap == false %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     </url>
-    {% endif %}
+    {% endunless %}
   {% endfor %}
 
-  {% comment %} 2. Main Posts Folder {% endcomment %}
+  {% comment %} 2. ARTICLES (AI, Health, Study) {% endcomment %}
   {% for post in site.posts %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
@@ -22,7 +22,6 @@ layout: null
     </url>
   {% endfor %}
 
-  {% comment %} 3. Health & Beauty Articles {% endcomment %}
   {% for item in site.health_beauty %}
     <url>
       <loc>{{ site.url }}{{ item.url }}</loc>
@@ -30,7 +29,6 @@ layout: null
     </url>
   {% endfor %}
 
-  {% comment %} 4. Study Articles {% endcomment %}
   {% for item in site.study %}
     <url>
       <loc>{{ site.url }}{{ item.url }}</loc>
