@@ -4,7 +4,7 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  {% comment %} 1. Saare Pages (About, Contact, etc.) {% endcomment %}
+  {% comment %} 1. Normal Pages {% endcomment %}
   {% for page in site.pages %}
     {% if page.url != '/404.html' and page.sitemap != false %}
     <url>
@@ -14,14 +14,28 @@ layout: null
     {% endif %}
   {% endfor %}
 
-  {% comment %} 2. Saare Articles (Automatic) {% endcomment %}
-  {% for doc in site.documents %}
-    {% if doc.sitemap != false and doc.url contains 'category' == false %}
+  {% comment %} 2. Main Posts Folder {% endcomment %}
+  {% for post in site.posts %}
     <url>
-      <loc>{{ site.url }}{{ doc.url }}</loc>
-      <lastmod>{{ doc.date | default: site.time | date_to_xmlschema }}</lastmod>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     </url>
-    {% endif %}
+  {% endfor %}
+
+  {% comment %} 3. Health & Beauty Articles {% endcomment %}
+  {% for item in site.health_beauty %}
+    <url>
+      <loc>{{ site.url }}{{ item.url }}</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    </url>
+  {% endfor %}
+
+  {% comment %} 4. Study Articles {% endcomment %}
+  {% for item in site.study %}
+    <url>
+      <loc>{{ site.url }}{{ item.url }}</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    </url>
   {% endfor %}
 
 </urlset>
