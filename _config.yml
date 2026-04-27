@@ -20,7 +20,7 @@ twitter:
 facebook:
   publisher: "https://www.facebook.com/AryxK6"
 
-logo: "/assets/og-default.png"
+logo: "/favicon.ico"
 
 # ── URL Structure ──
 # _posts (AI Tech Guide): /article-name/ (unchanged — no SEO damage)
