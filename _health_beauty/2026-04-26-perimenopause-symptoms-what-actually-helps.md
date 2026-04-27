@@ -16,7 +16,14 @@ description: "What perimenopause feels like, when it starts, and what the eviden
   "headline": "Perimenopause Symptoms and What Actually Helps",
   "description": "What perimenopause feels like, when it starts, and what the evidence says about managing hot flashes, sleep changes, and mood shifts in your 40s.",
   "author": {"@type": "Person", "name": "Aryx K."},
-  "publisher": {"@type": "Organization", "name": "ARYX Guide": {"@type": "ImageObject", "url": "https://www.aryxguide.site/favicon.ico"}},
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARYX Guide",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aryxguide.site/favicon.ico"
+    }
+  },
   "datePublished": "2026-04-26",
   "dateModified": "2026-04-26",
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aryxguide.site/perimenopause-symptoms-what-actually-helps"},
