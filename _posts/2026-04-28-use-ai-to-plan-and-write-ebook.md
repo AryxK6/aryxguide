@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How to Use AI to Plan and Write a Complete eBook"
-description: "A practical process for using AI to write an eBook that people actually want to read, not just a bloated word dump nobody finishes."
+title: "How to Write and Sell an eBook With AI (Without It Sounding Like AI)"
+description: "Most AI eBooks are fast to write and useless to read. This guide shows how to use AI for outlines and drafts while keeping your own expertise and voice in the final product."
 date: 2026-04-28
 categories: [AI Tools, Digital Products]
 tags: [how to write ebook with ai, ai ebook creation 2026, digital products blogging, chatgpt ebook, claude ebook writing, how to create digital products ai]
