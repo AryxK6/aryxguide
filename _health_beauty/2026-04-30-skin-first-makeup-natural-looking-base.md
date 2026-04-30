@@ -14,16 +14,33 @@ description: "How to build a natural makeup base that looks like skin. The produ
   "@type": "Article",
   "headline": "Skin-First Makeup: Build a Natural-Looking Base",
   "description": "How to build a natural makeup base that looks like skin. The products, order, and techniques for a dewy minimal look that lasts.",
-  "author": {"@type": "Person", "name": "Aryx K."},
-  "publisher": {"@type": "Organization", "name": "ARYX Guide": {"@type": "ImageObject", "url": "https://www.aryxguide.site/favicon.ico"}},
+  "author": {
+    "@type": "Person", 
+    "name": "Aryx K."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARYX Guide",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aryxguide.site/favicon.ico"
+    }
+  },
   "datePublished": "2026-04-30",
   "dateModified": "2026-04-30",
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aryxguide.site/skin-first-makeup-natural-looking-base"},
-  "image": "https://i.ibb.co/LX4hRzP9/Woman-applying-tinted-202604110636.jpg",
+  "mainEntityOfPage": {
+    "@type": "WebPage", 
+    "@id": "https://www.aryxguide.site/skin-first-makeup-natural-looking-base"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://i.ibb.co/LX4hRzP9/Woman-applying-tinted-202604110636.jpg"
+  },
   "articleSection": "Makeup & Beauty",
   "keywords": "skin first makeup, natural makeup look, dewy base makeup, no makeup makeup look, tinted moisturizer routine, cream blush application, minimal makeup routine, how to look natural with makeup, skin tint vs foundation"
 }
 </script>
+
 
 The no-makeup makeup look is one of those things that sounds simple and is actually the most technically demanding thing you can do with cosmetics. Full glam is forgiving. If one thing is overdone you add more of everything else and it balances out. Minimal makeup has nowhere to hide. Every product choice and every application technique is visible, which means the bar for doing it well is higher than most people realize.
 
