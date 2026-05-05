@@ -21,10 +21,10 @@ layout: default
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a>
     <span class="sep">›</span>
-    <a href="/health-beauty/">Health & Beauty</a>
+    <a href="/category/health-beauty/">Health & Beauty</a>
     {% if page.parent_slug %}
     <span class="sep">›</span>
-    <a href="/health-beauty/{{ page.parent_slug }}/">{{ page.parent_category }}</a>
+    <a href="/category/category/health-beauty/{{ page.parent_slug }}/">{{ page.parent_category }}</a>
     {% endif %}
     <span class="sep">›</span>
     <span class="current">{{ page.title }}</span>
@@ -44,21 +44,21 @@ layout: default
   <!-- Sub-category pills — auto from silo -->
   {% unless page.parent_slug %}
   <div class="subcat-filter">
-    <a href="/health-beauty/skin-care/" class="filter-pill">Skin Care</a>
-    <a href="/health-beauty/hair-care/" class="filter-pill">Hair Care</a>
-    <a href="/health-beauty/body-care/" class="filter-pill">Body Care</a>
-    <a href="/health-beauty/makeup-beauty/" class="filter-pill">Makeup & Beauty</a>
-    <a href="/health-beauty/health-wellness/" class="filter-pill">Health & Wellness</a>
-    <a href="/health-beauty/womens-health/" class="filter-pill">Women's Health</a>
-    <a href="/health-beauty/product-reviews/" class="filter-pill">Product Reviews</a>
-    <a href="/health-beauty/natural-diy/" class="filter-pill">Natural & DIY</a>
+    <a href="/category/health-beauty/skin-care/" class="filter-pill">Skin Care</a>
+    <a href="/category/health-beauty/hair-care/" class="filter-pill">Hair Care</a>
+    <a href="/category/health-beauty/body-care/" class="filter-pill">Body Care</a>
+    <a href="/category/health-beauty/makeup-beauty/" class="filter-pill">Makeup & Beauty</a>
+    <a href="/category/health-beauty/health-wellness/" class="filter-pill">Health & Wellness</a>
+    <a href="/category/health-beauty/womens-health/" class="filter-pill">Women's Health</a>
+    <a href="/category/health-beauty/product-reviews/" class="filter-pill">Product Reviews</a>
+    <a href="/category/health-beauty/natural-diy/" class="filter-pill">Natural & DIY</a>
   </div>
   {% endunless %}
 
   {% if page.parent_slug %}
   <!-- Sub-category back link -->
   <div style="margin-bottom:20px;">
-    <a href="/health-beauty/{{ page.parent_slug }}/" style="font-size:13px;color:var(--hb-primary);display:inline-flex;align-items:center;gap:6px;">← Back to {{ page.parent_category }}</a>
+    <a href="/category/category/health-beauty/{{ page.parent_slug }}/" style="font-size:13px;color:var(--hb-primary);display:inline-flex;align-items:center;gap:6px;">← Back to {{ page.parent_category }}</a>
   </div>
   {% endif %}
 
