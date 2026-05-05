@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ARYXGuide — AI Tools, Health & Beauty, Study Guides
+title: ARYXGuide - AI Tools, Health & Beauty, Study Guides
 description: Practical guides on AI tools, health & beauty, and study tips. Real content, tested strategies, no filler.
 permalink: /
 sitemap: true
@@ -8,9 +8,7 @@ sitemap: true
 
 <div class="container" style="padding-bottom:60px;">
 
-  <!-- ═══════════════════════════════════════
-       HERO GRID
-  ═══════════════════════════════════════ -->
+  
   <div class="hero-strip">
     {% assign latest_ai = site.posts | sort: 'date' | reverse %}
     {% assign latest_hb = site.health_beauty | sort: 'date' | reverse %}
@@ -20,7 +18,7 @@ sitemap: true
     {% assign side2 = latest_st | first %}
 
     <div class="hero-grid">
-      <!-- Main featured — latest AI post -->
+      
       {% if hero_post %}
       <a href="{{ hero_post.url }}" class="hero-main" style="text-decoration:none;">
         {% if hero_post.image %}
@@ -38,7 +36,7 @@ sitemap: true
       </a>
       {% endif %}
 
-      <!-- Side 1 — latest Health post -->
+      
       {% if side1 %}
       <a href="{{ side1.url }}" class="hero-side hero-side-img" style="text-decoration:none;{% if side1.image %}background-image:url('{{ side1.image }}');{% endif %}">
         <div class="hero-side-overlay"></div>
@@ -61,7 +59,7 @@ sitemap: true
       </div>
       {% endif %}
 
-      <!-- Side 2 — latest Study post -->
+      
       {% if side2 %}
       <a href="{{ side2.url }}" class="hero-side hero-side-img" style="text-decoration:none;{% if side2.image %}background-image:url('{{ side2.image }}');{% endif %}">
         <div class="hero-side-overlay"></div>
@@ -86,20 +84,18 @@ sitemap: true
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       AI GUIDE — Latest 3
-  ═══════════════════════════════════════ -->
+  
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
         <div class="section-icon icon-ai">⚡</div>
         <div class="section-title-wrap">
-          <div class="section-title">AI Guide</div>
+          <div class="section-title">Digital Guide</div>
           <div class="section-desc">Tools, SEO, blogging & ways to make money online</div>
         </div>
       </div>
       <div class="section-line"></div>
-      <a href="/category/ai-guides/" class="section-view-all ai">View All →</a>
+      <a href="/category/digital-guide/" class="section-view-all ai">View All →</a>
     </div>
     <div class="cards-grid-4">
       {% for post in latest_ai limit: 4 %}
@@ -123,9 +119,7 @@ sitemap: true
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       HEALTH & BEAUTY — Latest 3
-  ═══════════════════════════════════════ -->
+  
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
@@ -136,7 +130,7 @@ sitemap: true
         </div>
       </div>
       <div class="section-line"></div>
-      <a href="/health-beauty/" class="section-view-all hb">View All →</a>
+      <a href="/category/health-beauty/" class="section-view-all hb">View All →</a>
     </div>
 
     {% if latest_hb.size > 0 %}
@@ -169,9 +163,7 @@ sitemap: true
     {% endif %}
   </div>
 
-  <!-- ═══════════════════════════════════════
-       STUDY — Latest 3
-  ═══════════════════════════════════════ -->
+  
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
@@ -182,7 +174,7 @@ sitemap: true
         </div>
       </div>
       <div class="section-line"></div>
-      <a href="/study/" class="section-view-all st">View All →</a>
+      <a href="/category/study/" class="section-view-all st">View All →</a>
     </div>
 
     {% if latest_st.size > 0 %}
@@ -215,9 +207,7 @@ sitemap: true
     {% endif %}
   </div>
 
-  <!-- ═══════════════════════════════════════
-       MORE AI — Next 3 (posts 4-6)
-  ═══════════════════════════════════════ -->
+  
   {% assign more_ai = latest_ai | offset: 3 %}
   {% if more_ai.size > 0 %}
   <div class="reveal" style="margin-bottom:52px;">
@@ -230,7 +220,7 @@ sitemap: true
         </div>
       </div>
       <div class="section-line"></div>
-      <a href="/category/ai-guides/" class="section-view-all ai">All Posts →</a>
+      <a href="/category/digital-guide/" class="section-view-all ai">All Posts →</a>
     </div>
     <div class="cards-grid-4">
       {% for post in more_ai limit: 4 %}
