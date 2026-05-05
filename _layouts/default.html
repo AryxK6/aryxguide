@@ -649,8 +649,8 @@ body::before {
 /* ============================================================
    SECTION HEADERS
    ============================================================ */
-.section-header { display: flex; align-items: center; gap: 12px; margin: 40px 0 20px; min-width: 0; }
-.section-header-left { display: flex; align-items: center; gap: 12px; flex-shrink: 0; min-width: 0; }
+.section-header { display: flex; align-items: center; gap: 12px; margin: 40px 0 20px; min-width: 0; flex-wrap: wrap; }
+.section-header-left { display: flex; align-items: center; gap: 12px; flex-shrink: 0; min-width: 0; flex: 1; }
 .section-icon {
   width: 32px; height: 32px; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
@@ -669,7 +669,8 @@ body::before {
   flex-shrink: 0; font-size: 12px; font-weight: 700;
   padding: 6px 14px; border-radius: var(--radius-sm);
   border: 1px solid var(--border); color: var(--text-2);
-  transition: all 0.2s;
+  transition: all 0.2s; white-space: nowrap;
+  text-decoration: none; display: inline-block;
 }
 .section-view-all.ai { color: var(--ai-primary); border-color: var(--ai-border); }
 .section-view-all.ai:hover { background: var(--ai-dim); }
