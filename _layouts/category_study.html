@@ -21,10 +21,10 @@ layout: default
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a>
     <span class="sep">›</span>
-    <a href="/study/">Study</a>
+    <a href="/category/study/">Study</a>
     {% if page.parent_slug %}
     <span class="sep">›</span>
-    <a href="/study/{{ page.parent_slug }}/">{{ page.parent_category }}</a>
+    <a href="/category/study/{{ page.parent_slug }}/">{{ page.parent_category }}</a>
     {% endif %}
     <span class="sep">›</span>
     <span class="current">{{ page.title }}</span>
@@ -43,22 +43,22 @@ layout: default
 
   {% unless page.parent_slug %}
   <div class="subcat-filter">
-    <a href="/study/study-tips/" class="filter-pill">Study Tips</a>
-    <a href="/study/career-guidance/" class="filter-pill">Career Guidance</a>
-    <a href="/study/online-courses/" class="filter-pill">Online Courses</a>
-    <a href="/study/certifications/" class="filter-pill">Certifications</a>
-    <a href="/study/freelancing-remote/" class="filter-pill">Freelancing</a>
-    <a href="/study/personal-growth/" class="filter-pill">Personal Growth</a>
-    <a href="/study/digital-skills/" class="filter-pill">Digital Skills</a>
-    <a href="/study/college-student-life/" class="filter-pill">College Life</a>
-    <a href="/study/language-communication/" class="filter-pill">Language</a>
-    <a href="/study/tools-resources/" class="filter-pill">Tools</a>
+    <a href="/category/study/study-tips/" class="filter-pill">Study Tips</a>
+    <a href="/category/study/career-guidance/" class="filter-pill">Career Guidance</a>
+    <a href="/category/study/online-courses/" class="filter-pill">Online Courses</a>
+    <a href="/category/study/certifications/" class="filter-pill">Certifications</a>
+    <a href="/category/study/freelancing-remote/" class="filter-pill">Freelancing</a>
+    <a href="/category/study/personal-growth/" class="filter-pill">Personal Growth</a>
+    <a href="/category/study/digital-skills/" class="filter-pill">Digital Skills</a>
+    <a href="/category/study/college-student-life/" class="filter-pill">College Life</a>
+    <a href="/category/study/language-communication/" class="filter-pill">Language</a>
+    <a href="/category/study/tools-resources/" class="filter-pill">Tools</a>
   </div>
   {% endunless %}
 
   {% if page.parent_slug %}
   <div style="margin-bottom:20px;">
-    <a href="/study/{{ page.parent_slug }}/" style="font-size:13px;color:var(--st-primary);display:inline-flex;align-items:center;gap:6px;">← Back to {{ page.parent_category }}</a>
+    <a href="/category/study/{{ page.parent_slug }}/" style="font-size:13px;color:var(--st-primary);display:inline-flex;align-items:center;gap:6px;">← Back to {{ page.parent_category }}</a>
   </div>
   {% endif %}
 
