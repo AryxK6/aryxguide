@@ -41,20 +41,20 @@ Career guidance, certifications, online courses, freelancing, digital skills, an
 ## Silo Category URLs
 
 ### AI Guide — Main Silos
-- AI Tools: https://www.aryxguide.site/category/ai-tools/
+- AI Tools: https://www.aryxguide.site/category/digital-guide/
 - Make Money Online: https://www.aryxguide.site/category/make-money-online/
 - Blogging & SEO: https://www.aryxguide.site/category/blogging-seo/
 - Marketing & Social: https://www.aryxguide.site/category/marketing-social/
 - Productivity & Business: https://www.aryxguide.site/category/productivity-business/
 
 ### AI Guide — Sub-Categories
-- AI Guide: https://www.aryxguide.site/category/ai-tools/ai-guide/
-- AI Tutorial: https://www.aryxguide.site/category/ai-tools/ai-tutorial/
-- AI Image Generation: https://www.aryxguide.site/category/ai-tools/ai-image-generation/
-- AI Video Creation: https://www.aryxguide.site/category/ai-tools/ai-video-creation/
-- Voice AI: https://www.aryxguide.site/category/ai-tools/voice-ai/
-- Artificial Intelligence: https://www.aryxguide.site/category/ai-tools/artificial-intelligence/
-- Coding: https://www.aryxguide.site/category/ai-tools/coding/
+- AI Guide: https://www.aryxguide.site/category/digital-guide/ai-guide/
+- AI Tutorial: https://www.aryxguide.site/category/digital-guide/ai-tutorial/
+- AI Image Generation: https://www.aryxguide.site/category/digital-guide/ai-image-generation/
+- AI Video Creation: https://www.aryxguide.site/category/digital-guide/ai-video-creation/
+- Voice AI: https://www.aryxguide.site/category/digital-guide/voice-ai/
+- Artificial Intelligence: https://www.aryxguide.site/category/digital-guide/artificial-intelligence/
+- Coding: https://www.aryxguide.site/category/digital-guide/coding/
 - Affiliate Marketing: https://www.aryxguide.site/category/make-money-online/affiliate-marketing/
 - Digital Products: https://www.aryxguide.site/category/make-money-online/digital-products/
 - Passive Income: https://www.aryxguide.site/category/make-money-online/passive-income/
@@ -75,47 +75,47 @@ Career guidance, certifications, online courses, freelancing, digital skills, an
 - Research: https://www.aryxguide.site/category/productivity-business/research/
 
 ### Health & Beauty — Categories
-- Skin Care: https://www.aryxguide.site/health-beauty/skin-care/
-- Skin Care Routine: https://www.aryxguide.site/health-beauty/skin-care/skin-care-routine/
-- Anti-Aging: https://www.aryxguide.site/health-beauty/skin-care/anti-aging/
-- Acne & Blemishes: https://www.aryxguide.site/health-beauty/skin-care/acne-blemishes/
-- Natural Skin Care: https://www.aryxguide.site/health-beauty/skin-care/natural-skin-care/
-- Face Masks & Serums: https://www.aryxguide.site/health-beauty/skin-care/face-masks-serums/
-- Hair Care: https://www.aryxguide.site/health-beauty/hair-care/
-- Hair Growth: https://www.aryxguide.site/health-beauty/hair-care/hair-growth/
-- Hair Treatments: https://www.aryxguide.site/health-beauty/hair-care/hair-treatments/
-- Natural Hair Care: https://www.aryxguide.site/health-beauty/hair-care/natural-hair-care/
-- Hair Styling Tips: https://www.aryxguide.site/health-beauty/hair-care/hair-styling-tips/
-- Body Care: https://www.aryxguide.site/health-beauty/body-care/
-- Makeup & Beauty: https://www.aryxguide.site/health-beauty/makeup-beauty/
-- Health & Wellness: https://www.aryxguide.site/health-beauty/health-wellness/
-- Mental Health: https://www.aryxguide.site/health-beauty/health-wellness/mental-health/
-- Nutrition & Diet: https://www.aryxguide.site/health-beauty/health-wellness/nutrition-diet/
-- Sleep & Recovery: https://www.aryxguide.site/health-beauty/health-wellness/sleep-recovery/
-- Gut Health: https://www.aryxguide.site/health-beauty/health-wellness/gut-health/
-- Women's Health: https://www.aryxguide.site/health-beauty/womens-health/
-- Natural & DIY: https://www.aryxguide.site/health-beauty/natural-diy/
-- Product Reviews: https://www.aryxguide.site/health-beauty/product-reviews/
+- Skin Care: https://www.aryxguide.site/category/health-beauty/skin-care/
+- Skin Care Routine: https://www.aryxguide.site/category/health-beauty/skin-care/skin-care-routine/
+- Anti-Aging: https://www.aryxguide.site/category/health-beauty/skin-care/anti-aging/
+- Acne & Blemishes: https://www.aryxguide.site/category/health-beauty/skin-care/acne-blemishes/
+- Natural Skin Care: https://www.aryxguide.site/category/health-beauty/skin-care/natural-skin-care/
+- Face Masks & Serums: https://www.aryxguide.site/category/health-beauty/skin-care/face-masks-serums/
+- Hair Care: https://www.aryxguide.site/category/health-beauty/hair-care/
+- Hair Growth: https://www.aryxguide.site/category/health-beauty/hair-care/hair-growth/
+- Hair Treatments: https://www.aryxguide.site/category/health-beauty/hair-care/hair-treatments/
+- Natural Hair Care: https://www.aryxguide.site/category/health-beauty/hair-care/natural-hair-care/
+- Hair Styling Tips: https://www.aryxguide.site/category/health-beauty/hair-care/hair-styling-tips/
+- Body Care: https://www.aryxguide.site/category/health-beauty/body-care/
+- Makeup & Beauty: https://www.aryxguide.site/category/health-beauty/makeup-beauty/
+- Health & Wellness: https://www.aryxguide.site/category/health-beauty/health-wellness/
+- Mental Health: https://www.aryxguide.site/category/health-beauty/health-wellness/mental-health/
+- Nutrition & Diet: https://www.aryxguide.site/category/health-beauty/health-wellness/nutrition-diet/
+- Sleep & Recovery: https://www.aryxguide.site/category/health-beauty/health-wellness/sleep-recovery/
+- Gut Health: https://www.aryxguide.site/category/health-beauty/health-wellness/gut-health/
+- Women's Health: https://www.aryxguide.site/category/health-beauty/womens-health/
+- Natural & DIY: https://www.aryxguide.site/category/health-beauty/natural-diy/
+- Product Reviews: https://www.aryxguide.site/category/health-beauty/product-reviews/
 
 ### Study — Categories
-- Study Tips: https://www.aryxguide.site/study/study-tips/
-- Career Guidance: https://www.aryxguide.site/study/career-guidance/
-- Resume & Cover Letter: https://www.aryxguide.site/study/career-guidance/resume-cover-letter/
-- Job Interview Tips: https://www.aryxguide.site/study/career-guidance/job-interview-tips/
-- Entry Level Jobs: https://www.aryxguide.site/study/career-guidance/entry-level-jobs/
-- Remote Jobs: https://www.aryxguide.site/study/career-guidance/remote-jobs/
-- LinkedIn Optimization: https://www.aryxguide.site/study/career-guidance/linkedin-optimization/
-- Salary Negotiation: https://www.aryxguide.site/study/career-guidance/salary-negotiation/
-- Online Courses: https://www.aryxguide.site/study/online-courses/
-- Certifications: https://www.aryxguide.site/study/certifications/
-- Google Certificates: https://www.aryxguide.site/study/certifications/google-certificates/
-- Free Certificates: https://www.aryxguide.site/study/certifications/free-certificates/
-- Freelancing & Remote: https://www.aryxguide.site/study/freelancing-remote/
-- Personal Growth: https://www.aryxguide.site/study/personal-growth/
-- Digital Skills: https://www.aryxguide.site/study/digital-skills/
-- College Life: https://www.aryxguide.site/study/college-student-life/
-- Language & Communication: https://www.aryxguide.site/study/language-communication/
-- Tools & Resources: https://www.aryxguide.site/study/tools-resources/
+- Study Tips: https://www.aryxguide.site/category/study/study-tips/
+- Career Guidance: https://www.aryxguide.site/category/study/career-guidance/
+- Resume & Cover Letter: https://www.aryxguide.site/category/study/career-guidance/resume-cover-letter/
+- Job Interview Tips: https://www.aryxguide.site/category/study/career-guidance/job-interview-tips/
+- Entry Level Jobs: https://www.aryxguide.site/category/study/career-guidance/entry-level-jobs/
+- Remote Jobs: https://www.aryxguide.site/category/study/career-guidance/remote-jobs/
+- LinkedIn Optimization: https://www.aryxguide.site/category/study/career-guidance/linkedin-optimization/
+- Salary Negotiation: https://www.aryxguide.site/category/study/career-guidance/salary-negotiation/
+- Online Courses: https://www.aryxguide.site/category/study/online-courses/
+- Certifications: https://www.aryxguide.site/category/study/certifications/
+- Google Certificates: https://www.aryxguide.site/category/study/certifications/google-certificates/
+- Free Certificates: https://www.aryxguide.site/category/study/certifications/free-certificates/
+- Freelancing & Remote: https://www.aryxguide.site/category/study/freelancing-remote/
+- Personal Growth: https://www.aryxguide.site/category/study/personal-growth/
+- Digital Skills: https://www.aryxguide.site/category/study/digital-skills/
+- College Life: https://www.aryxguide.site/category/study/college-student-life/
+- Language & Communication: https://www.aryxguide.site/category/study/language-communication/
+- Tools & Resources: https://www.aryxguide.site/category/study/tools-resources/
 
 ---
 
