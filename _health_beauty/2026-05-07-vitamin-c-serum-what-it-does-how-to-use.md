@@ -16,7 +16,7 @@ description: "Vitamin C serum protects against sun damage, fades dark spots, and
   "headline": "Vitamin C Serum: What It Does and How to Use It",
   "description": "Vitamin C serum protects against sun damage, fades dark spots, and builds collagen. Here is what the research says and how to use one correctly.",
   "author": {"@type": "Person", "name": "Aryx K."},
-  "publisher": {"@type": "Organization", "name": "ARYX Guide": {"@type": "ImageObject", "url": "https://www.aryxguide.site/favicon.ico"}},
+  "publisher": {"@type": "Organization", "name": "ARYX Guide", "logo": {"@type": "ImageObject", "url": "https://www.aryxguide.site/favicon.ico"}},
   "datePublished": "2026-05-07",
   "dateModified": "2026-05-07",
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.aryxguide.site/vitamin-c-serum-what-it-does-how-to-use"},
@@ -146,6 +146,3 @@ Yes. The old claim that they react badly together has been shown to require temp
 
 **How long does a vitamin C serum last after opening?**
 Most L-ascorbic acid serums are effective for 2 to 3 months after opening if stored correctly in a cool dark location. Derivative-based serums last 6 months or longer. Check the color regularly. Once orange, the active ingredient is depleted regardless of the time since opening.
-
-
-
