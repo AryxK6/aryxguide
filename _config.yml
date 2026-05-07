@@ -1,10 +1,10 @@
 # ============================================================
 # ARYXGuide — Master Config
-# Silo Structure: AI Tech Guide | Health & Beauty | Study
+# Silo: Digital Guide | Health & Beauty | Study
 # ============================================================
 
 title: ARYXGuide
-description: Practical guides on digital skills, AI tools, health and beauty, and study tips. Real content, tested strategies, no filler.
+description: Practical guides on AI tools, health and beauty, and study tips. Real content, tested strategies, no filler.
 url: "https://www.aryxguide.site"
 baseurl: ""
 lang: en
@@ -22,11 +22,10 @@ facebook:
 
 logo: "/favicon.ico"
 
-# ── URL Structure ──
-# _posts (AI Tech Guide): /article-name/ (unchanged — no SEO damage)
+# ── Permalink ──
 permalink: /:title/
 
-# ── Collections (Health & Study silos) ──
+# ── Collections ──
 collections:
   health_beauty:
     output: true
@@ -67,28 +66,9 @@ defaults:
     values:
       layout: "default"
 
+  # Category pages — noindex via sitemap:false
   - scope:
       path: "category"
-    values:
-      sitemap: false
-
-  - scope:
-      path: "health-beauty"
-    values:
-      sitemap: false
-
-  - scope:
-      path: "study"
-    values:
-      sitemap: false
-
-  - scope:
-      path: "health-beauty"
-    values:
-      sitemap: false
-
-  - scope:
-      path: "study"
     values:
       sitemap: false
 
