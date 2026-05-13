@@ -61,7 +61,7 @@ author: Aryx K.
 
 <img src="https://i.ibb.co/kVy77j0N/hair-washing-mistakes-damage-prevention.jpg" alt="South Asian woman gently squeezing water from hair with microfiber towel at bathroom mirror, ARYX Guide pen on shelf" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="auto" fetchpriority="high" />
 
-<div class="quick-answer">
+<div style="background:#f0f4f8;border-left:4px solid #2563eb;padding:16px 20px;border-radius:6px;margin:24px 0;">
 <strong>Quick Answer:</strong> Most hair damage comes from wash-day habits, not styling tools. Washing too often, using hot water, applying shampoo to dry hair, rough towel drying, and brushing while wet are the most common causes of breakage and dryness. Switching these habits costs nothing and makes a visible difference within a few weeks.
 </div>
 
@@ -198,8 +198,8 @@ If you want to understand what ingredients in your hair products are actually do
 
 ---
 
-<div class="faq-box">
-<h2>Frequently asked questions</h2>
+<div style="background:#f9fafb;border:1px solid #e5e7eb;padding:20px 24px;border-radius:8px;margin:32px 0;">
+<h2 style="margin-top:0;">Frequently asked questions</h2>
 
 <h3>How often should I wash my hair?</h3>
 <p>Wash when your scalp feels dirty or itchy, not on a fixed schedule. Most hair types do well with two to three times per week. Coily or very thick hair may only need once a week. Washing more often than your scalp needs strips natural oil and triggers overproduction, which makes hair greasier faster.</p>
