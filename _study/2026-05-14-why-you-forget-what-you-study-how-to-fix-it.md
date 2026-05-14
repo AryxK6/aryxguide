@@ -61,7 +61,7 @@ author: Aryx K.
 
 <img src="https://i.ibb.co/0jdpLg6j/why-students-forget-what-they-study.jpg" alt="South Asian male student at study desk closing textbook trying to recall information, ARYX Guide mug and pen visible" style="max-width:100%;border-radius:10px;margin:20px 0;" width="1200" height="auto" fetchpriority="high" />
 
-<div style="background:#f0f4f8;border-left:4px solid #2563eb;padding:16px 20px;border-radius:6px;margin:24px 0;">
+<div style="border-left:4px solid #2563eb;padding:16px 20px;border-radius:6px;margin:24px 0;">
 <strong>Quick Answer:</strong> Forgetting what you study comes from using passive methods like rereading and highlighting, which feel productive but build no lasting memory. The fix is active recall (forcing yourself to retrieve information from memory), spaced repetition (reviewing at increasing intervals), and enough sleep to let the brain consolidate what you learned. These three changes together produce measurable improvement in retention within two to three weeks.
 </div>
 
@@ -208,7 +208,7 @@ Interleaving works at the weekly level too. Instead of dedicating Monday entirel
 
 ---
 
-<div style="background:#f9fafb;border:1px solid #e5e7eb;padding:20px 24px;border-radius:8px;margin:32px 0;">
+<div style="border:1px solid #e5e7eb;padding:20px 24px;border-radius:8px;margin:32px 0;">
 <h2 style="margin-top:0;">Frequently asked questions</h2>
 
 <h3>Why do I forget everything I study right before an exam?</h3>
