@@ -9,7 +9,7 @@ layout: default
   grid-template-columns: 1fr 300px;
   gap: 40px;
   align-items: start;
-  padding: 20px 0 60px;
+  padding: 4px 0 60px;
 }
 /* Article body max-width to prevent full-bleed on wide screens */
 @media (min-width: 901px) {
@@ -252,6 +252,52 @@ layout: default
   .article-nav-card.next { align-items: flex-start; text-align: left; }
   .author-bio-box { flex-direction: column; }
 }
+
+/* ── Accordion More Articles Widget ── */
+.widget-accordion .widget-title {
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: pointer; user-select: none;
+  padding-bottom: 12px; margin-bottom: 0;
+}
+.widget-accordion .acc-arrow {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; color: var(--text-3); flex-shrink: 0;
+  transition: transform 0.25s, background 0.2s;
+}
+.widget-accordion.open .acc-arrow { transform: rotate(180deg); background: var(--ai-dim); color: var(--ai-primary); }
+.widget-accordion .acc-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+.widget-accordion.open .acc-body { max-height: 800px; }
+
+/* ── Collapsible TOC ── */
+.toc-wrap { margin-bottom: 24px; }
+.toc-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; background: none; border: none;
+  padding: 0 0 10px; cursor: pointer;
+  font-family: var(--font-head); font-size: 13px; font-weight: 700;
+  color: var(--text-2); letter-spacing: 0.5px; text-transform: uppercase;
+  border-bottom: 1px solid var(--divider);
+}
+.toc-toggle-arrow {
+  width: 18px; height: 18px; border-radius: 4px;
+  background: var(--surface); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; color: var(--text-3);
+  transition: transform 0.25s cubic-bezier(0.16,1,0.3,1);
+  flex-shrink: 0;
+}
+.toc-toggle.open .toc-toggle-arrow { transform: rotate(180deg); }
+.toc-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+.toc-body.open { max-height: 600px; }
+.toc-list { padding-top: 10px; }
 </style>
 
 <div class="container">
@@ -264,7 +310,7 @@ layout: default
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <span class="sep" aria-hidden="true">›</span>
-        <a href="/category/digital-guide/ai-tools/">AI Guide</a>
+        <a href="/category/digital-guide/ai-tools/">Digital Guide</a>
         {% if page.category %}
         <span class="sep" aria-hidden="true">›</span>
         <a href="/category/{{ page.category | downcase | replace: ' ', '-' }}/">{{ page.category }}</a>
@@ -397,25 +443,25 @@ layout: default
     </article>
 
     <!-- ── SIDEBAR (AI-only content) ── -->
-    <aside class="article-sidebar" aria-label="Related AI Guide articles">
+    <aside class="article-sidebar" aria-label="Related Digital Guide articles">
 
-      <!-- Related in AI Guide only -->
+      <!-- Related in Digital Guide only -->
       <div class="widget">
-        <div class="sidebar-related-title">Related in AI Guide</div>
+        <div class="sidebar-related-title">Related in Digital Guide</div>
         {% include related_posts.html niche="ai" %}
       </div>
 
-      <!-- AI Guide Categories -->
+      <!-- Digital Guide Categories -->
       <div class="widget">
-        <div class="sidebar-related-title">AI Guide Categories</div>
-        <a href="/category/digital-guide/ai-tools/" class="sidebar-cat-link">⚡ AI Tools</a>
-        <a href="/category/digital-guide/blogging-seo/seo/" class="sidebar-cat-link">📈 SEO</a>
-        <a href="/category/digital-guide/blogging-seo/blogging/" class="sidebar-cat-link">✍️ Blogging</a>
-        <a href="/category/digital-guide/make-money-online/affiliate-marketing/" class="sidebar-cat-link">💰 Affiliate Marketing</a>
-        <a href="/category/digital-guide/ai-tools/ai-image-generation/" class="sidebar-cat-link">🎨 AI Image Generation</a>
-        <a href="/category/digital-guide/ai-tools/ai-video-creation/" class="sidebar-cat-link">🎬 AI Video Creation</a>
-        <a href="/category/digital-guide/productivity-business/productivity/" class="sidebar-cat-link">⚙️ Productivity</a>
-        <a href="/category/digital-guide/make-money-online/passive-income/" class="sidebar-cat-link">💸 Passive Income</a>
+        <div class="sidebar-related-title">Digital Guide Categories</div>
+        <a href="/category/digital-guide/ai-tools/" class="sidebar-cat-link"> AI Tools</a>
+        <a href="/category/digital-guide/blogging-seo/seo/" class="sidebar-cat-link"> SEO</a>
+        <a href="/category/digital-guide/blogging-seo/blogging/" class="sidebar-cat-link">️ Blogging</a>
+        <a href="/category/digital-guide/make-money-online/affiliate-marketing/" class="sidebar-cat-link"> Affiliate Marketing</a>
+        <a href="/category/digital-guide/ai-tools/ai-image-generation/" class="sidebar-cat-link"> AI Image Generation</a>
+        <a href="/category/digital-guide/ai-tools/ai-video-creation/" class="sidebar-cat-link"> AI Video Creation</a>
+        <a href="/category/digital-guide/productivity-business/productivity/" class="sidebar-cat-link"> Productivity</a>
+        <a href="/category/digital-guide/make-money-online/passive-income/" class="sidebar-cat-link"> Passive Income</a>
       </div>
 
       <!-- Recent Posts Archive -->
@@ -436,7 +482,7 @@ layout: default
 
       <!-- CTA -->
       <div class="widget" style="background:var(--ai-dim);border-color:var(--ai-border);text-align:center;padding:22px;">
-        <div style="font-size:28px;margin-bottom:10px;">⚡</div>
+        <div style="font-size:28px;margin-bottom:10px;"></div>
         <div style="font-family:var(--font-head);font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.3;">More AI & Tech Guides</div>
         <div style="font-size:12.5px;color:var(--text-2);line-height:1.6;margin-bottom:14px;">Practical guides on AI tools, SEO, and making money online.</div>
         <a href="/category/digital-guide/ai-tools/" style="display:inline-block;background:var(--ai-primary);color:#fff;padding:8px 18px;border-radius:6px;font-size:12.5px;font-weight:700;">Browse All →</a>
@@ -497,4 +543,20 @@ function copyLink(){
     if(btn){ btn.classList.add('copied'); setTimeout(function(){ btn.classList.remove('copied'); }, 2000); }
   }).catch(function(){});
 }
+
+/* TOC collapse */
+(function(){
+  var btn = document.querySelector('.toc-toggle');
+  var body = document.querySelector('.toc-body');
+  if(!btn || !body) return;
+  // Open by default on desktop, closed on mobile
+  if(window.innerWidth >= 900){
+    btn.classList.add('open');
+    body.classList.add('open');
+  }
+  btn.addEventListener('click', function(){
+    this.classList.toggle('open');
+    body.classList.toggle('open');
+  });
+})();
 </script>
