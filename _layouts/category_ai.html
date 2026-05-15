@@ -63,7 +63,7 @@ layout: default
   <!-- Category Header -->
   <div class="cat-header">
     <div class="cat-eyebrow">
-      <span class="niche-pill pill-ai">⚡ AI Guide</span>
+      <span class="niche-pill pill-ai">Digital Guide</span>
       {% if page.parent_category %}
       <span style="font-size:11px;color:var(--text-3);font-weight:600;letter-spacing:0.5px;">{{ page.parent_category }}</span>
       {% endif %}
@@ -79,7 +79,7 @@ layout: default
 
   {% if page_slug == "ai-tools" %}
   <div class="subcat-grid">
-    <a href="/category/digital-guide/ai-tools/ai-guide/" class="subcat-card"><div class="subcat-card-title">AI Guide</div><div class="subcat-card-desc">Complete guides on using AI tools effectively for work, content, and productivity.</div><div class="subcat-card-arrow">Browse →</div></a>
+    <a href="/category/digital-guide/ai-tools/ai-guide/" class="subcat-card"><div class="subcat-card-title">Digital Guide</div><div class="subcat-card-desc">Complete guides on using AI tools effectively for work, content, and productivity.</div><div class="subcat-card-arrow">Browse →</div></a>
     <a href="/category/digital-guide/ai-tools/ai-tutorial/" class="subcat-card"><div class="subcat-card-title">AI Tutorial</div><div class="subcat-card-desc">Step-by-step tutorials for learning and using specific AI tools without the fluff.</div><div class="subcat-card-arrow">Browse →</div></a>
     <a href="/category/digital-guide/ai-tools/ai-image-generation/" class="subcat-card"><div class="subcat-card-title">AI Image Generation</div><div class="subcat-card-desc">Midjourney, DALL-E, Flux, and more — tested and compared for real use cases.</div><div class="subcat-card-arrow">Browse →</div></a>
     <a href="/category/digital-guide/ai-tools/ai-video-creation/" class="subcat-card"><div class="subcat-card-title">AI Video Creation</div><div class="subcat-card-desc">Create professional videos using AI. No camera, no studio, no expensive gear.</div><div class="subcat-card-arrow">Browse →</div></a>
@@ -123,7 +123,7 @@ layout: default
   <div style="margin-top:8px;">
     <div class="section-header" style="margin-top:0;">
       <div class="section-header-left">
-        <div class="section-icon icon-ai" style="width:24px;height:24px;font-size:13px;">⚡</div>
+        <div class="section-icon icon-ai" style="width:24px;height:24px;font-size:13px;"></div>
         <div class="section-title" style="font-size:16px;">All Articles</div>
       </div>
       <div class="section-line"></div>
@@ -140,7 +140,7 @@ layout: default
   {% assign page_parent = page.parent_slug %}
   <div class="subcat-filter">
     {% if page_parent == "ai-tools" %}
-      <a href="/category/digital-guide/ai-tools/ai-guide/" class="filter-pill {% if page.url contains '/ai-guide/' %}active{% endif %}">AI Guide</a>
+      <a href="/category/digital-guide/ai-tools/ai-guide/" class="filter-pill {% if page.url contains '/ai-guide/' %}active{% endif %}">Digital Guide</a>
       <a href="/category/digital-guide/ai-tools/ai-tutorial/" class="filter-pill {% if page.url contains '/ai-tutorial/' %}active{% endif %}">AI Tutorial</a>
       <a href="/category/digital-guide/ai-tools/ai-image-generation/" class="filter-pill {% if page.url contains '/ai-image-generation/' %}active{% endif %}">AI Image</a>
       <a href="/category/digital-guide/ai-tools/ai-video-creation/" class="filter-pill {% if page.url contains '/ai-video-creation/' %}active{% endif %}">AI Video</a>
@@ -205,7 +205,7 @@ layout: default
   // Map sub-category slugs to post category names used in front matter
   var CAT_MAP = {
     // AI Tools
-    "ai-guide":             ["AI Guides","AI Guide","ai guide"],
+    "ai-guide":             ["AI Guides","Digital Guide","ai guide"],
     "ai-tutorial":          ["AI Tutorials","AI Tutorial","ai tutorial"],
     "ai-image-generation":  ["AI Image Generation","ai image"],
     "ai-video-creation":    ["AI Video Creation","ai video"],
