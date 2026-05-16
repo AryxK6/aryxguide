@@ -25,7 +25,54 @@ sitemap: true
         <img src="{{ hero_post.image }}" alt="{{ hero_post.image_alt | default: hero_post.title }}" loading="eager"/>
         {% endif %}
         <div class="hero-main-body">
-          <div class="niche-pill pill-ai">⚡ AI Guide</div>
+          <div class="niche-pill pill-ai">Digital Guide
+  <!-- ═══════════════════════════════════════
+       PERSONAL FINANCE
+  ═══════════════════════════════════════ -->
+  <div class="reveal" style="margin-bottom:52px;">
+    <div class="section-header">
+      <div class="section-header-left">
+        <div class="section-icon icon-pf"></div>
+        <div class="section-title-wrap">
+          <div class="section-title">Personal Finance</div>
+          <div class="section-desc">Budgeting, saving, online income & wealth building</div>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <a href="/category/finance/" class="section-view-all pf">View All →</a>
+    </div>
+
+    {% assign latest_pf = site.finance | sort: 'date' | reverse %}
+    {% if latest_pf.size > 0 %}
+    <div class="cards-grid-4">
+      {% for post in latest_pf limit: 4 %}
+      <a href="{{ post.url }}" class="acard pf" style="text-decoration:none;">
+        <div class="acard-img">
+          {% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}
+        </div>
+        <div class="acard-body">
+          {% assign pcat = post.categories | first | default: post.category %}
+          {% if pcat %}<div class="niche-pill pill-pf" style="font-size:9px;margin-bottom:6px;">{{ pcat }}</div>{% endif %}
+          <div class="acard-title">{{ post.title }}</div>
+          {% if post.description %}<div class="acard-excerpt">{{ post.description }}</div>
+          {% elsif post.excerpt %}<div class="acard-excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</div>{% endif %}
+          <div class="acard-foot">
+            <span class="acard-date">{{ post.date | date: "%b %d, %Y" }}</span>
+            <span class="acard-read" style="color:var(--pf-primary);">Read →</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div style="background:var(--pf-dim);border:1px solid var(--pf-border);border-radius:var(--radius-md);padding:32px;text-align:center;">
+      <div style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;">Personal Finance Articles Coming Soon</div>
+      <div style="font-size:13px;color:var(--text-2);">Add MD files to _finance/ folder to publish.</div>
+    </div>
+    {% endif %}
+  </div>
+
+</div>
           <div class="article-title">{{ hero_post.title }}</div>
           <div class="article-meta" style="color:rgba(255,255,255,0.5);">
             <span>Aryx K.</span><span class="sep">·</span>
@@ -41,7 +88,7 @@ sitemap: true
       <a href="{{ side1.url }}" class="hero-side hero-side-img" style="text-decoration:none;{% if side1.image %}background-image:url('{{ side1.image }}');{% endif %}">
         <div class="hero-side-overlay"></div>
         <div class="hero-side-body">
-          <div class="niche-pill pill-hb">🌸 Health & Beauty</div>
+          <div class="niche-pill pill-hb"> Health & Beauty</div>
           <div class="article-title" style="color:#fff;">{{ side1.title }}</div>
           <div class="article-meta" style="color:rgba(255,255,255,0.5);">
             <span>Aryx K.</span><span class="sep">·</span>
@@ -53,7 +100,7 @@ sitemap: true
       {% else %}
       <div class="hero-side" style="justify-content:center;align-items:center;text-align:center;">
         <div style="opacity:0.4;">
-          <div style="font-size:32px;margin-bottom:8px;">🌸</div>
+          <div style="font-size:32px;margin-bottom:8px;"></div>
           <div style="font-size:13px;color:var(--text-3);">Health & Beauty<br>articles coming soon</div>
         </div>
       </div>
@@ -64,7 +111,7 @@ sitemap: true
       <a href="{{ side2.url }}" class="hero-side hero-side-img" style="text-decoration:none;{% if side2.image %}background-image:url('{{ side2.image }}');{% endif %}">
         <div class="hero-side-overlay"></div>
         <div class="hero-side-body">
-          <div class="niche-pill pill-st">📚 Study</div>
+          <div class="niche-pill pill-st"> Study</div>
           <div class="article-title" style="color:#fff;">{{ side2.title }}</div>
           <div class="article-meta" style="color:rgba(255,255,255,0.5);">
             <span>Aryx K.</span><span class="sep">·</span>
@@ -76,7 +123,7 @@ sitemap: true
       {% else %}
       <div class="hero-side" style="justify-content:center;align-items:center;text-align:center;">
         <div style="opacity:0.4;">
-          <div style="font-size:32px;margin-bottom:8px;">📚</div>
+          <div style="font-size:32px;margin-bottom:8px;"></div>
           <div style="font-size:13px;color:var(--text-3);">Study articles<br>coming soon</div>
         </div>
       </div>
@@ -88,7 +135,7 @@ sitemap: true
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
-        <div class="section-icon icon-ai">⚡</div>
+        <div class="section-icon icon-ai"></div>
         <div class="section-title-wrap">
           <div class="section-title">Digital Guide</div>
           <div class="section-desc">Tools, SEO, blogging & ways to make money online</div>
@@ -123,7 +170,7 @@ sitemap: true
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
-        <div class="section-icon icon-hb">🌸</div>
+        <div class="section-icon icon-hb"></div>
         <div class="section-title-wrap">
           <div class="section-title">Health & Beauty</div>
           <div class="section-desc">Skin care, wellness, hair care & natural DIY</div>
@@ -135,7 +182,7 @@ sitemap: true
 
     {% if latest_hb.size > 0 %}
     <div class="cards-grid-3">
-      {% for post in latest_hb limit: 3 %}
+      {% for post in latest_hb limit: 4 %}
       <a href="{{ post.url }}" class="acard hb" style="text-decoration:none;">
         <div class="acard-img">
           {% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}
@@ -156,7 +203,7 @@ sitemap: true
     </div>
     {% else %}
     <div style="background:var(--hb-dim);border:1px solid var(--hb-border);border-radius:var(--radius-md);padding:32px;text-align:center;">
-      <div style="font-size:36px;margin-bottom:12px;">🌸</div>
+      <div style="font-size:36px;margin-bottom:12px;"></div>
       <div style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;">Health & Beauty Articles Coming Soon</div>
       <div style="font-size:13px;color:var(--text-2);line-height:1.6;">Skin care, hair care, wellness and natural DIY guides are being published. Add MD files to <code>_health_beauty/</code> folder.</div>
     </div>
@@ -167,7 +214,7 @@ sitemap: true
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
-        <div class="section-icon icon-st">📚</div>
+        <div class="section-icon icon-st"></div>
         <div class="section-title-wrap">
           <div class="section-title">Study</div>
           <div class="section-desc">Career, certifications, skills & student success</div>
@@ -179,7 +226,7 @@ sitemap: true
 
     {% if latest_st.size > 0 %}
     <div class="cards-grid-3">
-      {% for post in latest_st limit: 3 %}
+      {% for post in latest_st limit: 4 %}
       <a href="{{ post.url }}" class="acard st" style="text-decoration:none;">
         <div class="acard-img">
           {% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}
@@ -200,7 +247,7 @@ sitemap: true
     </div>
     {% else %}
     <div style="background:var(--st-dim);border:1px solid var(--st-border);border-radius:var(--radius-md);padding:32px;text-align:center;">
-      <div style="font-size:36px;margin-bottom:12px;">📚</div>
+      <div style="font-size:36px;margin-bottom:12px;"></div>
       <div style="font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;">Study Articles Coming Soon</div>
       <div style="font-size:13px;color:var(--text-2);line-height:1.6;">Career, certifications, and digital skills guides are being published. Add MD files to <code>_study/</code> folder.</div>
     </div>
@@ -213,7 +260,7 @@ sitemap: true
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
-        <div class="section-icon icon-ai">🔥</div>
+        <div class="section-icon icon-ai"></div>
         <div class="section-title-wrap">
           <div class="section-title">More AI Guides</div>
           <div class="section-desc">Recently published</div>
