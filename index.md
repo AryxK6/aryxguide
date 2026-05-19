@@ -25,10 +25,8 @@ sitemap: true
         <img src="{{ hero_post.image }}" alt="{{ hero_post.image_alt | default: hero_post.title }}" loading="eager"/>
         {% endif %}
         <div class="hero-main-body">
-          <div class="niche-pill pill-ai">Digital Guide
-  <!-- ═══════════════════════════════════════
-       PERSONAL FINANCE
-  ═══════════════════════════════════════ -->
+          <div class="niche-pill pill-ai">Digital Guide</div>
+  <!-- PERSONAL FINANCE -->
   <div class="reveal" style="margin-bottom:52px;">
     <div class="section-header">
       <div class="section-header-left">
@@ -71,6 +69,100 @@ sitemap: true
     </div>
     {% endif %}
   </div>
+
+  <!-- More Health & Beauty -->
+  {% assign more_hb = latest_hb | offset: 4 %}
+  {% if more_hb.size > 0 %}
+  <div class="reveal" style="margin-bottom:52px;">
+    <div class="section-header">
+      <div class="section-header-left">
+        <div class="section-icon icon-hb"></div>
+        <div class="section-title-wrap">
+          <div class="section-title">More Health & Beauty</div>
+          <div class="section-desc">Recently published</div>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <a href="/category/health-beauty/" class="section-view-all hb">All Posts →</a>
+    </div>
+    <div class="cards-grid-4">
+      {% for post in more_hb limit: 4 %}
+      <a href="{{ post.url }}" class="acard hb" style="text-decoration:none;">
+        <div class="acard-img">{% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}</div>
+        <div class="acard-body">
+          {% assign hcat2 = post.categories | first | default: post.category %}
+          {% if hcat2 %}<div class="niche-pill pill-hb" style="font-size:9px;margin-bottom:6px;">{{ hcat2 }}</div>{% endif %}
+          <div class="acard-title">{{ post.title }}</div>
+          <div class="acard-foot"><span class="acard-date">{{ post.date | date: "%b %d, %Y" }}</span><span class="acard-read" style="color:var(--hb-primary);">Read →</span></div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- More Study -->
+  {% assign more_st = latest_st | offset: 4 %}
+  {% if more_st.size > 0 %}
+  <div class="reveal" style="margin-bottom:52px;">
+    <div class="section-header">
+      <div class="section-header-left">
+        <div class="section-icon icon-st"></div>
+        <div class="section-title-wrap">
+          <div class="section-title">More Study & Career</div>
+          <div class="section-desc">Recently published</div>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <a href="/category/study/" class="section-view-all st">All Posts →</a>
+    </div>
+    <div class="cards-grid-4">
+      {% for post in more_st limit: 4 %}
+      <a href="{{ post.url }}" class="acard st" style="text-decoration:none;">
+        <div class="acard-img">{% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}</div>
+        <div class="acard-body">
+          {% assign scat2 = post.categories | first | default: post.category %}
+          {% if scat2 %}<div class="niche-pill pill-st" style="font-size:9px;margin-bottom:6px;">{{ scat2 }}</div>{% endif %}
+          <div class="acard-title">{{ post.title }}</div>
+          <div class="acard-foot"><span class="acard-date">{{ post.date | date: "%b %d, %Y" }}</span><span class="acard-read" style="color:var(--st-primary);">Read →</span></div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- More Personal Finance -->
+  {% assign more_pf = latest_pf | offset: 4 %}
+  {% if more_pf.size > 0 %}
+  <div class="reveal" style="margin-bottom:52px;">
+    <div class="section-header">
+      <div class="section-header-left">
+        <div class="section-icon icon-pf"></div>
+        <div class="section-title-wrap">
+          <div class="section-title">More Personal Finance</div>
+          <div class="section-desc">Recently published</div>
+        </div>
+      </div>
+      <div class="section-line"></div>
+      <a href="/category/finance/" class="section-view-all pf">All Posts →</a>
+    </div>
+    <div class="cards-grid-4">
+      {% for post in more_pf limit: 4 %}
+      <a href="{{ post.url }}" class="acard pf" style="text-decoration:none;">
+        <div class="acard-img">{% if post.image %}<img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy"/>{% endif %}</div>
+        <div class="acard-body">
+          {% assign pcat2 = post.categories | first | default: post.category %}
+          {% if pcat2 %}<div class="niche-pill pill-pf" style="font-size:9px;margin-bottom:6px;">{{ pcat2 }}</div>{% endif %}
+          <div class="acard-title">{{ post.title }}</div>
+          <div class="acard-foot"><span class="acard-date">{{ post.date | date: "%b %d, %Y" }}</span><span class="acard-read" style="color:var(--pf-primary);">Read →</span></div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
 
 </div>
           <div class="article-title">{{ hero_post.title }}</div>
@@ -262,7 +354,7 @@ sitemap: true
       <div class="section-header-left">
         <div class="section-icon icon-ai"></div>
         <div class="section-title-wrap">
-          <div class="section-title">More AI Guides</div>
+          <div class="section-title">More Digital Guide</div>
           <div class="section-desc">Recently published</div>
         </div>
       </div>
