@@ -165,7 +165,7 @@
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body {
-  visibility: hidden;
+  visibility: visible;
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
@@ -860,6 +860,7 @@ body::before {
 .fnt-ai { background: var(--ai-dim); color: var(--ai-light); border: 1px solid var(--ai-border); }
 .fnt-hb { background: var(--hb-dim); color: var(--hb-light); border: 1px solid var(--hb-border); }
 .fnt-st { background: var(--st-dim); color: var(--st-light); border: 1px solid var(--st-border); }
+.fnt-pf { background: var(--pf-dim); color: var(--pf-primary); border: 1px solid var(--pf-border); }
 .footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
 .footer-col a { display: block; padding: 5px 0; font-size: 13px; color: var(--text-2); transition: color 0.15s; }
 .footer-col-ai a:hover { color: var(--ai-primary); }
@@ -919,7 +920,7 @@ body::before {
 @media (max-width: 480px) {
   .footer-main { grid-template-columns: 1fr; }
 }
-  body.loaded { visibility: visible; }
+  /* visibility restored */
 
 /* ── Section Icons — no emoji ── */
 .section-icon {
@@ -1413,6 +1414,7 @@ body::before {
           <span class="footer-niche-tag fnt-ai">Digital Guide</span>
           <span class="footer-niche-tag fnt-hb"> Health & Beauty</span>
           <span class="footer-niche-tag fnt-st">Study</span>
+          <span class="footer-niche-tag fnt-pf">Finance</span>
         </div>
         <div class="footer-social">
           <a href="https://x.com/Aryx_K6" class="social-icon x" target="_blank" rel="noopener noreferrer" aria-label="Follow on X">
@@ -1644,10 +1646,8 @@ if(yr) yr.textContent = new Date().getFullYear();
 document.addEventListener('DOMContentLoaded', function(){
   document.body.classList.add('loaded');
   // Hide loader
-  setTimeout(function(){
-    var loader = document.getElementById('page-loader');
-    if(loader) loader.classList.add('loaded');
-  }, 600);
+  var loader = document.getElementById('page-loader');
+  if(loader) loader.classList.add('loaded');
   // Typing cursor — hide after 2s
   setTimeout(function(){
     var cur = document.getElementById('logoCursor');
